@@ -1,0 +1,508 @@
+/* =========================================================
+   CERANET — Feuille de style partagée (index-fr.html / index-ar.html)
+   Utilise des variables CSS pour les couleurs de marque et des
+   sélecteurs [dir="rtl"] pour les quelques ajustements miroir.
+   ========================================================= */
+
+:root{
+  --ceranet-blue:#1D4B7F;
+  --ceranet-blue-deep:#0D3358;
+  --ceranet-red:#D23227;
+  --ceranet-green:#51A959;
+  --ceranet-sky:#0997D7;
+}
+
+html{ scroll-behavior:smooth; }
+
+body{ font-family:'Inter','Cairo',sans-serif; }
+[dir="rtl"] body{ font-family:'Cairo','Inter',sans-serif; }
+
+.font-utility{ font-family:'Roboto','Tajawal',sans-serif; }
+[dir="rtl"] .font-utility{ font-family:'Tajawal','Roboto',sans-serif; }
+
+/* ===== Motifs & décor ===== */
+.tile-pattern{
+  background-image:
+    linear-gradient(rgba(29,75,127,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29,75,127,0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.shine-card{ position:relative; overflow:hidden; }
+.shine-card::after{
+  content:"";
+  position:absolute; top:0; left:-150%;
+  width:60%; height:100%;
+  background:linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%);
+  transform:skewX(-20deg);
+  transition:left 0.9s ease;
+}
+.shine-card:hover::after{ left:150%; }
+[dir="rtl"] .shine-card::after{
+  left:auto; right:-150%;
+  transform:skewX(20deg);
+  transition:right 0.9s ease;
+}
+[dir="rtl"] .shine-card:hover::after{ left:auto; right:150%; }
+
+.accent-underline{
+  background:linear-gradient(90deg, var(--ceranet-sky), var(--ceranet-green), var(--ceranet-red));
+}
+[dir="rtl"] .accent-underline{
+  background:linear-gradient(90deg, var(--ceranet-red), var(--ceranet-green), var(--ceranet-sky));
+}
+
+.cta-btn{
+  background:var(--ceranet-red);
+  box-shadow:0 10px 25px -8px rgba(210,50,39,0.55);
+}
+.cta-btn:hover{ background:#b02a20; }
+
+.wa-btn{
+  background:#1FAA55;
+  box-shadow:0 10px 25px -8px rgba(31,170,85,0.5);
+}
+.wa-btn:hover{ background:#178a45; }
+
+.contact-chip{
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.contact-chip:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 24px -10px rgba(13,51,88,0.35);
+}
+
+input:focus, select:focus, textarea:focus{
+  outline:none;
+  border-color:var(--ceranet-blue);
+  box-shadow:0 0 0 3px rgba(29,75,127,0.15);
+}
+
+.drop-fade{ animation: dropFade 0.9s ease both; }
+@keyframes dropFade{
+  from{ opacity:0; transform:translateY(14px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+/* ===== BEFORE / AFTER SLIDER — rendu dalle de sol réaliste ===== */
+.ba-wrap{
+  position:relative;
+  width:100%;
+  aspect-ratio: 16/9;
+  border-radius:1.5rem;
+  overflow:hidden;
+  user-select:none;
+  box-shadow:0 30px 60px -20px rgba(13,51,88,0.35);
+}
+.ba-layer{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/* Grille de vrais carreaux avec joints + biseau
+   Le nombre de colonnes/lignes est calculé en JS (main.js) pour que
+   chaque carreau reste toujours carré, quel que soit le format de l'écran. */
+.ba-floor{
+  position:absolute; inset:0;
+  display:grid;
+  grid-template-columns:repeat(var(--ba-cols, 10), 1fr);
+  grid-template-rows:repeat(var(--ba-rows, 6), 1fr);
+  gap:3px;
+  padding:3px;
+}
+.ba-floor > span{
+  display:block;
+  border-radius:1px;
+  background-repeat:no-repeat;
+}
+
+/* --- AVANT : carrelage terne, sale, mat --- */
+.ba-before{ background:#5b5044; } /* joint sombre/encrassé */
+.ba-before .ba-floor > span{
+  background-color:#a99c86;
+  background-image:
+    radial-gradient(ellipse at 25% 20%, rgba(255,255,255,0.12), transparent 55%),
+    radial-gradient(ellipse at 75% 80%, rgba(70,58,40,0.25), transparent 60%);
+  box-shadow:
+    inset 1.5px 1.5px 2px rgba(0,0,0,0.30),
+    inset -1px -1px 1.5px rgba(255,255,255,0.06);
+}
+.ba-before .ba-floor > span:nth-child(3n){ background-color:#9c8f79; }
+.ba-before .ba-floor > span:nth-child(4n){ background-color:#b3a690; }
+.ba-before .ba-floor > span:nth-child(7n){ background-color:#948572; }
+
+/* Salissures / traces d'usure superposées, non alignées à la grille */
+.ba-grime{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 22% 14% at 18% 30%, rgba(59,45,26,0.45), transparent 70%),
+    radial-gradient(ellipse 30% 18% at 65% 70%, rgba(59,45,26,0.35), transparent 70%),
+    radial-gradient(ellipse 16% 20% at 85% 25%, rgba(59,45,26,0.30), transparent 70%),
+    radial-gradient(ellipse 25% 12% at 40% 85%, rgba(59,45,26,0.28), transparent 70%),
+    radial-gradient(ellipse 14% 24% at 8% 78%, rgba(59,45,26,0.30), transparent 70%);
+  mix-blend-mode:multiply;
+}
+.ba-before-vignette{
+  position:absolute; inset:0;
+  background:radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.28) 100%);
+  filter:saturate(0.7) brightness(0.92);
+}
+
+/* --- APRÈS : carrelage propre, lumineux, brillant --- */
+.ba-after{ background:#c3cbd2; } /* joint clair, net */
+.ba-after .ba-floor > span{
+  background-color:#eef2f5;
+  background-image:
+    radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.85), transparent 55%),
+    radial-gradient(ellipse at 75% 75%, rgba(180,195,205,0.35), transparent 60%);
+  box-shadow:
+    inset -1.5px -1.5px 2px rgba(255,255,255,0.9),
+    inset 1.5px 1.5px 2px rgba(120,135,148,0.35);
+}
+.ba-after .ba-floor > span:nth-child(3n){ background-color:#e6ecf0; }
+.ba-after .ba-floor > span:nth-child(4n){ background-color:#f4f8fa; }
+.ba-after .ba-floor > span:nth-child(7n){ background-color:#dfe7ec; }
+.ba-after::after{
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.75) 48%, transparent 66%);
+  background-size:250% 250%;
+  animation: baShine 3.5s ease-in-out infinite;
+  mix-blend-mode:soft-light;
+}
+@keyframes baShine{
+  0%{ background-position: 120% 0%; }
+  100%{ background-position: -20% 0%; }
+}
+
+.ba-clip{
+  position:absolute; inset:0;
+  clip-path: inset(0 0 0 var(--ba-pos, 50%));
+}
+[dir="rtl"] .ba-clip{
+  clip-path: inset(0 var(--ba-pos, 50%) 0 0);
+}
+
+.ba-handle{
+  position:absolute; top:0; bottom:0;
+  left:var(--ba-pos, 50%);
+  width:0;
+  transform:translateX(-50%);
+  display:flex; align-items:center; justify-content:center;
+  cursor:ew-resize;
+  z-index:10;
+}
+[dir="rtl"] .ba-handle{
+  left:auto; right:var(--ba-pos, 50%);
+  transform:translateX(50%);
+}
+.ba-handle::before{
+  content:"";
+  position:absolute; top:0; bottom:0; left:50%;
+  width:3px; background:white;
+  transform:translateX(-50%);
+  box-shadow:0 0 0 1px rgba(0,0,0,0.08);
+}
+[dir="rtl"] .ba-handle::before{
+  left:auto; right:50%;
+  transform:translateX(50%);
+}
+
+.ba-grip{
+  width:52px; height:52px; border-radius:9999px;
+  background:white;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 8px 20px rgba(13,51,88,0.35);
+  position:relative;
+}
+.ba-tag{
+  position:absolute; top:20px;
+  font-family:'Roboto','Tajawal',sans-serif; font-weight:700; font-size:0.7rem;
+  letter-spacing:0.15em; text-transform:uppercase;
+  padding:6px 14px; border-radius:9999px; color:white;
+  z-index:5;
+}
+.ba-tag-before{ left:20px; background:rgba(13,51,88,0.75); }
+.ba-tag-after{ right:20px; background:var(--ceranet-red); }
+[dir="rtl"] .ba-tag-before{ left:auto; right:20px; }
+[dir="rtl"] .ba-tag-after{ right:auto; left:20px; }
+
+@media (max-width: 640px){
+  .ba-wrap{ aspect-ratio: 4/5; border-radius:1rem; }
+  .ba-grip{ width:40px; height:40px; }
+  .ba-tag{ top:12px; font-size:0.6rem; padding:5px 10px; letter-spacing:0.1em; }
+  .ba-tag-before{ left:12px; }
+  .ba-tag-after{ right:12px; }
+  [dir="rtl"] .ba-tag-before{ right:12px; }
+  [dir="rtl"] .ba-tag-after{ left:12px; }
+}
+
+/* ===== Bannière hero responsive (desktop / mobile) ===== */
+.hero-desktop{ display:block; }
+.hero-mobile{ display:none; }
+@media (max-width: 767px){
+  .hero-desktop{ display:none; }
+  .hero-mobile{ display:block; }
+}
+
+/* =========================================================
+   NOS PRODUITS — cartes v2 avec sélecteur de format 5L / 2L
+   ========================================================= */
+.pc-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:1.75rem;
+  padding:2rem;
+  text-align:center;
+}
+@media (min-width:640px){ .pc-card{ padding:2.75rem 2.25rem; } }
+
+.pc-card--dark{
+  background:linear-gradient(150deg, var(--ceranet-blue-deep), var(--ceranet-blue) 75%);
+  color:white;
+  box-shadow:0 25px 50px -20px rgba(13,51,88,0.55);
+}
+.pc-card--light{
+  background:linear-gradient(150deg, #fffdf7, #fdf3e2 80%);
+  border:1px solid #f3e4c4;
+  color:var(--ceranet-blue-deep);
+  box-shadow:0 25px 50px -25px rgba(13,51,88,0.18);
+}
+
+.pc-blob{
+  position:absolute;
+  width:340px; height:340px;
+  border-radius:9999px;
+  filter:blur(50px);
+  opacity:0.55;
+  pointer-events:none;
+  top:-90px; right:-90px;
+}
+.pc-card--dark .pc-blob{ background:radial-gradient(circle, var(--ceranet-sky), transparent 70%); }
+.pc-card--light .pc-blob{ background:radial-gradient(circle, var(--ceranet-red), transparent 70%); opacity:0.12; }
+
+.pc-top{
+  position:relative;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem;
+  margin-bottom:1.75rem;
+}
+.pc-eyebrow{
+  font-family:'Roboto','Tajawal',sans-serif;
+  font-weight:700; font-size:0.68rem;
+  letter-spacing:0.18em; text-transform:uppercase;
+  padding:6px 14px; border-radius:9999px;
+}
+.pc-card--dark .pc-eyebrow{ background:rgba(255,255,255,0.12); color:#bfe3ff; }
+.pc-card--light .pc-eyebrow{ background:rgba(210,50,39,0.1); color:var(--ceranet-red); }
+
+/* Sélecteur segmenté 5L / 2L avec curseur animé (GSAP) */
+.pc-toggle{
+  position:relative;
+  display:inline-flex;
+  border-radius:9999px;
+  padding:4px;
+  gap:2px;
+}
+.pc-card--dark .pc-toggle{ background:rgba(255,255,255,0.12); }
+.pc-card--light .pc-toggle{ background:rgba(13,51,88,0.06); }
+.pc-toggle-thumb{
+  position:absolute; top:4px; left:4px;
+  width:calc(50% - 4px); height:calc(100% - 8px);
+  border-radius:9999px;
+  z-index:0;
+}
+.pc-card--dark .pc-toggle-thumb{ background:white; box-shadow:0 4px 12px rgba(0,0,0,0.25); }
+.pc-card--light .pc-toggle-thumb{ background:var(--ceranet-blue-deep); box-shadow:0 4px 12px rgba(13,51,88,0.25); }
+[dir="rtl"] .pc-toggle-thumb{ left:auto; right:4px; }
+
+.pc-toggle-btn{
+  position:relative; z-index:1;
+  font-family:'Roboto','Tajawal',sans-serif;
+  font-weight:800; font-size:0.78rem;
+  padding:7px 20px;
+  border-radius:9999px;
+  background:transparent;
+  transition:color .25s ease;
+  cursor:pointer;
+}
+.pc-card--dark .pc-toggle-btn{ color:rgba(255,255,255,0.6); }
+.pc-card--dark .pc-toggle-btn.is-active{ color:var(--ceranet-blue-deep); }
+.pc-card--light .pc-toggle-btn{ color:rgba(13,51,88,0.45); }
+.pc-card--light .pc-toggle-btn.is-active{ color:white; }
+
+/* Zone image avec cross-fade GSAP */
+.pc-imgbox{
+  position:relative;
+  height:220px;
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 1.75rem;
+}
+@media (min-width:640px){ .pc-imgbox{ height:270px; } }
+.pc-img{
+  position:absolute; inset:0;
+  margin:auto;
+  height:100%; width:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 25px 25px rgba(0,0,0,0.28));
+}
+
+.pc-title{ font-weight:900; line-height:1.15; }
+.pc-desc{ margin-top:0.9rem; line-height:1.7; }
+.pc-card--dark .pc-desc{ color:#cfe1f2; }
+.pc-card--light .pc-desc{ color:#5c6b7a; }
+
+.pc-pills{
+  display:flex; flex-wrap:wrap; gap:0.5rem;
+  justify-content:center;
+  margin-top:1.25rem;
+}
+.pc-pill{
+  font-family:'Roboto','Tajawal',sans-serif;
+  font-size:0.72rem; font-weight:700;
+  padding:6px 14px; border-radius:9999px;
+}
+
+.pc-contenance{
+  margin-top:1.25rem;
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'Roboto','Tajawal',sans-serif;
+  font-weight:700; font-size:0.82rem;
+  padding:8px 18px; border-radius:9999px;
+}
+.pc-card--dark .pc-contenance{ background:rgba(255,255,255,0.1); }
+.pc-card--light .pc-contenance{ background:rgba(13,51,88,0.06); color:var(--ceranet-blue-deep); }
+
+.pc-cta{
+  margin-top:1.75rem;
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  width:100%;
+  font-family:'Roboto','Tajawal',sans-serif;
+  font-weight:800; font-size:0.85rem;
+  padding:14px; border-radius:9999px;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.pc-cta:hover{ transform:translateY(-2px); }
+.pc-card--dark .pc-cta{ background:var(--ceranet-red); color:white; box-shadow:0 12px 24px -8px rgba(210,50,39,0.6); }
+.pc-card--light .pc-cta{ background:var(--ceranet-blue-deep); color:white; box-shadow:0 12px 24px -8px rgba(13,51,88,0.35); }
+
+/* =========================================================
+   FORMULAIRE — protection anti-spam
+   ========================================================= */
+/* Honeypot : invisible pour un humain, souvent rempli par un bot */
+.hp-field{
+  position:absolute !important;
+  width:1px; height:1px;
+  padding:0; margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+/* ===== Champs obligatoires — état invalide ===== */
+.rounded-xl.is-invalid,
+select.is-invalid,
+input.is-invalid,
+textarea.is-invalid{
+  border-color:var(--ceranet-red) !important;
+  box-shadow:0 0 0 3px rgba(210,50,39,0.12);
+  animation: rcShake .4s ease;
+}
+.field-error{
+  font-size:0.76rem;
+  font-weight:600;
+  font-family:'Roboto','Tajawal',sans-serif;
+  color:var(--ceranet-red);
+  margin-top:-2px;
+}
+@keyframes rcShake{
+  0%,100%{ transform:translateX(0); }
+  25%{ transform:translateX(-6px); }
+  75%{ transform:translateX(6px); }
+}
+
+/* ===== Mini-défi anti-robot (calcul, vérifié réellement en JS) ===== */
+.captcha-check{
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  background:#f4f6f8;
+  border:1px solid #e2e6ea;
+  border-radius:1rem;
+  padding:14px 18px;
+  transition:border-color .2s ease;
+}
+.captcha-check.is-error{ border-color:var(--ceranet-red); animation: rcShake .4s ease; }
+.captcha-check.is-checked{ border-color:var(--ceranet-green); }
+.captcha-icon-wrap{
+  width:40px; height:40px; border-radius:0.75rem;
+  background:rgba(29,75,127,0.08);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.captcha-check.is-checked .captcha-icon-wrap{ background:rgba(81,169,89,0.15); }
+.captcha-question{ flex:1 1 160px; min-width:140px; }
+.captcha-label{ font-family:'Roboto','Tajawal',sans-serif; font-size:0.9rem; font-weight:700; color:#3d4a57; }
+.captcha-sub{ font-size:0.72rem; color:#8b97a3; margin-top:1px; }
+.captcha-input{
+  width:64px;
+  text-align:center;
+  font-weight:800;
+  font-size:1rem;
+  border-radius:0.65rem;
+  border:2px solid #c3cbd2;
+  padding:10px 6px;
+  background:white;
+  transition:border-color .2s ease;
+}
+.captcha-input:focus{ outline:none; border-color:var(--ceranet-blue); }
+.captcha-check.is-checked .captcha-input{ border-color:var(--ceranet-green); }
+.captcha-refresh{
+  width:38px; height:38px; border-radius:9999px;
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid #e2e6ea; background:white; cursor:pointer;
+  flex-shrink:0;
+  transition:transform .35s ease, border-color .2s ease;
+}
+.captcha-refresh:hover{ transform:rotate(90deg); border-color:var(--ceranet-blue); }
+
+/* ===== Bouton d'envoi — état désactivé pendant la soumission ===== */
+.cta-btn:disabled{
+  opacity:0.6;
+  cursor:not-allowed;
+  transform:none !important;
+}
+
+/* =========================================================
+   OVERLAY DE CONFIRMATION D'ENVOI
+   ========================================================= */
+.success-overlay{
+  position:fixed; inset:0; z-index:100;
+  display:none;
+  align-items:center; justify-content:center;
+  background:linear-gradient(160deg, var(--ceranet-blue-deep), var(--ceranet-blue));
+  text-align:center;
+  padding:2rem;
+}
+.success-overlay.is-visible{ display:flex; }
+.success-check{
+  width:96px; height:96px; border-radius:9999px;
+  background:rgba(255,255,255,0.12);
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 1.75rem;
+}
+.success-check svg{ width:48px; height:48px; }
+.success-check circle{
+  fill:none; stroke:white; stroke-width:2.5;
+  stroke-dasharray:166; stroke-dashoffset:166;
+}
+.success-check path{
+  fill:none; stroke:white; stroke-width:3;
+  stroke-linecap:round; stroke-linejoin:round;
+  stroke-dasharray:48; stroke-dashoffset:48;
+}
+
+/* =========================================================
+   RÉVÉLATION AU DÉFILEMENT (GSAP ScrollTrigger)
+   ========================================================= */
+.reveal-up{ opacity:0; transform:translateY(28px); }
+
