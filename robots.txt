@@ -1,0 +1,68 @@
+# ============================================================
+# CERANET — robots.txt
+# Remplacer ceranet.dz par le vrai domaine.
+#
+# Les robots d'IA sont autorisés EXPLICITEMENT : c'est la
+# première chose à vérifier quand on veut être cité par
+# ChatGPT, Perplexity, Gemini ou Claude. Certains hébergeurs
+# et CDN (Cloudflare notamment) les bloquent par défaut.
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Moteurs de recherche classiques
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Extraction pour les réponses génératives de Google
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Apple, Meta, Mistral, DuckDuckGo
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+Sitemap: https://www.ceranet.dz/sitemap.xml

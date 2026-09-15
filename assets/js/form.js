@@ -1,231 +1,168 @@
 /* =========================================================
-   CERANET — Formulaire de contact
-   - Champs obligatoires réellement bloquants (pas juste "required"
-     HTML : validation visuelle + focus sur le premier champ manquant)
-   - Honeypot anti-bot (champ invisible, reconnu aussi par Web3Forms)
-   - Mini-défi anti-robot 100% JS : calcul généré aléatoirement et
-     VÉRIFIÉ avant l'envoi (contrairement à une simple case à cocher,
-     ça ne peut pas être validé sans lire réellement le nombre affiché)
-   - Envoi réel des données via Web3Forms (aucun backend nécessaire)
-   - Overlay de confirmation animé (GSAP) + redirection
+   CERANET — formulaire de commande
+   - Validation bloquante avec message sous le champ fautif
+   - Champ piège (honeypot) reconnu par Web3Forms
+   - Mini-défi arithmétique réellement vérifié avant l'envoi
+   - Envoi via Web3Forms, sans serveur
    ========================================================= */
+(function () {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  var form = document.getElementById('contactForm');
-  if (!form) return;
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('orderForm');
+    if (!form) return;
 
-  var overlay = document.getElementById('successOverlay');
-  var redirectTarget = form.getAttribute('data-redirect') || window.location.pathname;
-  var honeypot = form.querySelector('.hp-field input');
-  var submitBtn = form.querySelector('button[type="submit"]');
-  var submitBtnDefaultLabel = submitBtn ? submitBtn.textContent : '';
-  var formErrorEl = form.querySelector('[data-form-error]');
+    var sent = document.getElementById('sent');
+    var honeypot = form.querySelector('.honeypot input');
+    var submit = form.querySelector('button[type="submit"]');
+    var submitLabel = submit ? submit.textContent : '';
+    var globalError = form.querySelector('.form-error');
+    var redirect = form.dataset.redirect || window.location.pathname;
 
-  /* ---------- Champs obligatoires ---------- */
-  var requiredFields = Array.prototype.slice.call(form.querySelectorAll('[data-required]'));
+    /* ---------- Champs obligatoires ---------- */
+    var required = Array.prototype.slice.call(form.querySelectorAll('[data-required]'));
 
-  function fieldWrap(field) {
-    return field.closest('[data-field]');
-  }
-
-  function errorElFor(field) {
-    var wrap = fieldWrap(field);
-    return wrap ? wrap.querySelector('.field-error') : null;
-  }
-
-  function isFieldFilled(field) {
-    return field.value.trim() !== '';
-  }
-
-  function showFieldError(field) {
-    field.classList.add('is-invalid');
-    var errorEl = errorElFor(field);
-    if (errorEl) errorEl.hidden = false;
-  }
-
-  function clearFieldError(field) {
-    field.classList.remove('is-invalid');
-    var errorEl = errorElFor(field);
-    if (errorEl) errorEl.hidden = true;
-  }
-
-  requiredFields.forEach(function (field) {
-    var revalidate = function () {
-      if (isFieldFilled(field)) clearFieldError(field);
-    };
-    field.addEventListener('input', revalidate);
-    field.addEventListener('change', revalidate);
-    field.addEventListener('blur', function () {
-      if (!isFieldFilled(field)) showFieldError(field);
-    });
-  });
-
-  function validateRequiredFields() {
-    var firstInvalid = null;
-    requiredFields.forEach(function (field) {
-      if (!isFieldFilled(field)) {
-        showFieldError(field);
-        if (!firstInvalid) firstInvalid = field;
-      } else {
-        clearFieldError(field);
-      }
-    });
-    return firstInvalid;
-  }
-
-  /* ---------- Mini-défi anti-robot (calcul) ---------- */
-  var captchaBox = document.getElementById('captchaBox');
-  var captchaAEl = document.getElementById('captchaA');
-  var captchaBEl = document.getElementById('captchaB');
-  var captchaInput = document.getElementById('captchaAnswer');
-  var captchaRefresh = document.getElementById('captchaRefresh');
-  var captchaExpected = null;
-
-  function newCaptcha() {
-    var a = Math.floor(Math.random() * 8) + 2; /* 2 à 9 */
-    var b = Math.floor(Math.random() * 8) + 2; /* 2 à 9 */
-    captchaExpected = a + b;
-    if (captchaAEl) captchaAEl.textContent = a;
-    if (captchaBEl) captchaBEl.textContent = b;
-    if (captchaInput) captchaInput.value = '';
-    if (captchaBox) captchaBox.classList.remove('is-error', 'is-checked');
-    var errorEl = document.querySelector('[data-error-for="captchaAnswer"]');
-    if (errorEl) errorEl.hidden = true;
-  }
-
-  if (captchaInput) {
-    newCaptcha();
-    captchaInput.addEventListener('input', function () {
-      if (captchaBox) captchaBox.classList.remove('is-error');
-      var errorEl = document.querySelector('[data-error-for="captchaAnswer"]');
-      if (errorEl) errorEl.hidden = true;
-      if (parseInt(captchaInput.value, 10) === captchaExpected) {
-        captchaBox.classList.add('is-checked');
-      } else if (captchaBox) {
-        captchaBox.classList.remove('is-checked');
-      }
-    });
-  }
-
-  if (captchaRefresh) {
-    captchaRefresh.addEventListener('click', function (e) {
-      e.preventDefault();
-      newCaptcha();
-    });
-  }
-
-  function isCaptchaValid() {
-    return captchaInput && parseInt(captchaInput.value, 10) === captchaExpected;
-  }
-
-  function showCaptchaError() {
-    if (captchaBox) captchaBox.classList.add('is-error');
-    var errorEl = document.querySelector('[data-error-for="captchaAnswer"]');
-    if (errorEl) errorEl.hidden = false;
-  }
-
-  /* ---------- Soumission ---------- */
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (formErrorEl) formErrorEl.hidden = true;
-
-    /* Honeypot rempli => très probablement un bot : on feint le succès
-       pour ne pas lui indiquer qu'il a été détecté, sans rien envoyer. */
-    if (honeypot && honeypot.value.trim() !== '') {
-      showSuccess();
-      return;
+    function errorFor(field) {
+      return form.querySelector('[data-error-for="' + field.id + '"]');
     }
 
-    var firstInvalid = validateRequiredFields();
-
-    if (!isCaptchaValid()) {
-      showCaptchaError();
-      if (!firstInvalid) firstInvalid = captchaInput;
+    function mark(field, invalid) {
+      field.classList.toggle('invalid', invalid);
+      field.setAttribute('aria-invalid', String(invalid));
+      var message = errorFor(field);
+      if (message) message.hidden = !invalid;
     }
 
-    if (firstInvalid) {
-      firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      firstInvalid.focus({ preventScroll: true });
-      return;
-    }
-
-    submitForm();
-  });
-
-  function submitForm() {
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = submitBtn.getAttribute('data-sending-label') || submitBtnDefaultLabel;
-    }
-
-    var formData = new FormData(form);
-    /* Le champ du mini-défi ne doit pas partir dans l'e-mail final */
-    formData.delete('captcha_answer');
-
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { Accept: 'application/json' },
-      body: formData
-    })
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
-        if (data && data.success) {
-          showSuccess();
-        } else {
-          handleSubmitError();
-        }
-      })
-      .catch(function () {
-        handleSubmitError();
+    required.forEach(function (field) {
+      var recheck = function () { if (field.value.trim()) mark(field, false); };
+      field.addEventListener('input', recheck);
+      field.addEventListener('change', recheck);
+      field.addEventListener('blur', function () {
+        if (!field.value.trim()) mark(field, true);
       });
-  }
+    });
 
-  function handleSubmitError() {
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.textContent = submitBtnDefaultLabel;
-    }
-    if (formErrorEl) {
-      formErrorEl.hidden = false;
-      formErrorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
-
-  function showSuccess() {
-    if (!overlay) {
-      window.location.href = redirectTarget;
-      return;
-    }
-    overlay.classList.add('is-visible');
-
-    if (typeof gsap !== 'undefined') {
-      var circle = overlay.querySelector('circle');
-      var check = overlay.querySelector('path');
-      var content = overlay.querySelectorAll('[data-success-anim]');
-
-      var tl = gsap.timeline();
-      tl.fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 0.35 })
-        .fromTo(content, { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.08 }, '-=0.15')
-        .to(circle, { strokeDashoffset: 0, duration: 0.6, ease: 'power2.out' }, '-=0.3')
-        .to(check, { strokeDashoffset: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2');
-    } else {
-      /* Filet de sécurité sans GSAP : on affiche directement le résultat final */
-      var circleFallback = overlay.querySelector('circle');
-      var checkFallback = overlay.querySelector('path');
-      if (circleFallback) circleFallback.style.strokeDashoffset = '0';
-      if (checkFallback) checkFallback.style.strokeDashoffset = '0';
+    function firstEmptyField() {
+      var first = null;
+      required.forEach(function (field) {
+        var empty = !field.value.trim();
+        mark(field, empty);
+        if (empty && !first) first = field;
+      });
+      return first;
     }
 
-    var countdownEl = overlay.querySelector('[data-countdown]');
-    var seconds = 4;
-    if (countdownEl) countdownEl.textContent = seconds;
-    var interval = setInterval(function () {
-      seconds -= 1;
-      if (countdownEl) countdownEl.textContent = Math.max(seconds, 0);
-      if (seconds <= 0) {
-        clearInterval(interval);
-        window.location.href = redirectTarget;
+    /* ---------- Mini-défi arithmétique ---------- */
+    var box = document.getElementById('challenge');
+    var termA = document.getElementById('challengeA');
+    var termB = document.getElementById('challengeB');
+    var answer = document.getElementById('challengeAnswer');
+    var renew = document.getElementById('challengeRenew');
+    var expected = null;
+
+    function newChallenge() {
+      var a = Math.floor(Math.random() * 8) + 2;
+      var b = Math.floor(Math.random() * 8) + 2;
+      expected = a + b;
+      if (termA) termA.textContent = a;
+      if (termB) termB.textContent = b;
+      if (answer) answer.value = '';
+      if (box) box.classList.remove('ok', 'ko');
+      var message = document.querySelector('[data-error-for="challengeAnswer"]');
+      if (message) message.hidden = true;
+    }
+
+    function challengePassed() {
+      return answer && parseInt(answer.value, 10) === expected;
+    }
+
+    if (answer) {
+      newChallenge();
+      answer.addEventListener('input', function () {
+        var message = document.querySelector('[data-error-for="challengeAnswer"]');
+        if (message) message.hidden = true;
+        box.classList.remove('ko');
+        box.classList.toggle('ok', challengePassed());
+      });
+    }
+
+    if (renew) {
+      renew.addEventListener('click', newChallenge);
+    }
+
+    /* ---------- Envoi ---------- */
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (globalError) globalError.hidden = true;
+
+      /* Champ piège rempli : c'est un robot. On affiche la confirmation
+         sans rien envoyer, pour ne pas lui signaler qu'il a été repéré. */
+      if (honeypot && honeypot.value.trim()) { showConfirmation(); return; }
+
+      var target = firstEmptyField();
+
+      if (!challengePassed()) {
+        if (box) box.classList.add('ko');
+        var message = document.querySelector('[data-error-for="challengeAnswer"]');
+        if (message) message.hidden = false;
+        if (!target) target = answer;
       }
-    }, 1000);
-  }
-});
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.focus({ preventScroll: true });
+        return;
+      }
+
+      send();
+    });
+
+    function send() {
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = submit.dataset.sending || submitLabel;
+      }
+
+      var data = new FormData(form);
+      data.delete('challenge_answer');   /* ne doit pas partir dans l'e-mail */
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: data
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (r) { r && r.success ? showConfirmation() : failed(); })
+        .catch(failed);
+    }
+
+    function failed() {
+      if (submit) {
+        submit.disabled = false;
+        submit.textContent = submitLabel;
+      }
+      if (globalError) {
+        globalError.hidden = false;
+        globalError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    function showConfirmation() {
+      if (!sent) { window.location.href = redirect; return; }
+      sent.classList.add('show');
+
+      var counter = sent.querySelector('[data-countdown]');
+      var left = 5;
+      if (counter) counter.textContent = left;
+
+      var tick = setInterval(function () {
+        left -= 1;
+        if (counter) counter.textContent = Math.max(left, 0);
+        if (left <= 0) {
+          clearInterval(tick);
+          window.location.href = redirect;
+        }
+      }, 1000);
+    }
+  });
+})();

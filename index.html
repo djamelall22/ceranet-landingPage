@@ -1,988 +1,802 @@
 <!doctype html>
 <html lang="fr" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      CERANET — Nettoyant Céramique Extérieur & Professionnel | Algérie
-    </title>
-    <meta
-      name="description"
-      content="CERANET, l'expert du nettoyage céramique en Algérie. Nettoyant extérieur DXS 6000 et professionnel 3-en-1 DXS 6000N, disponibles en 5L et 2L. Protège, nettoie, fait briller."
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body class="bg-gray-50 text-gray-800 antialiased">
-    <!-- NAVBAR -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div class="flex items-center justify-between h-16 sm:h-20">
-          <a href="#" class="flex items-center gap-3 shrink-0">
-            <img
-              src="assets/img/ceranet-logo.svg"
-              alt="CERANET"
-              class="h-9 sm:h-12 w-auto mix-blend-multiply"
-            />
-          </a>
-          <div
-            class="hidden md:flex items-center gap-10 font-utility text-sm font-medium text-gray-600"
-          >
-            <a
-              href="#avant-apres"
-              class="hover:text-[var(--ceranet-blue)] transition-colors"
-              >Avant / Après</a
-            >
-            <a
-              href="#produits"
-              class="hover:text-[var(--ceranet-blue)] transition-colors"
-              >Produits</a
-            >
-            <a
-              href="#avantages"
-              class="hover:text-[var(--ceranet-blue)] transition-colors"
-              >Avantages</a
-            >
-            <a
-              href="#commande"
-              class="hover:text-[var(--ceranet-blue)] transition-colors"
-              >Contact</a
-            >
-          </div>
-          <div class="flex items-center gap-2 sm:gap-3">
-            <a
-              href="index-ar.html"
-              class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-full border border-gray-200 text-xs font-utility font-semibold text-gray-500 hover:border-[var(--ceranet-blue)] hover:text-[var(--ceranet-blue)] transition-colors"
-            >
-              عربي
-            </a>
-            <a
-              href="#commande"
-              class="cta-btn text-white font-utility font-bold text-xs sm:text-sm px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full transition-colors whitespace-nowrap"
-            >
-              Commander
-            </a>
-            <button
-              id="menuBtn"
-              aria-label="Ouvrir le menu"
-              aria-expanded="false"
-              class="md:hidden flex items-center justify-center w-9 h-9 rounded-full border border-gray-200 text-[var(--ceranet-blue-deep)] shrink-0"
-            >
-              <svg
-                id="menuIconOpen"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <svg
-                id="menuIconClose"
-                class="w-5 h-5 hidden"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          id="mobileMenu"
-          class="md:hidden hidden flex-col gap-1 pb-5 font-utility text-sm font-medium text-gray-600"
-        >
-          <a
-            href="#avant-apres"
-            class="px-2 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[var(--ceranet-blue)] transition-colors"
-            >Avant / Après</a
-          >
-          <a
-            href="#produits"
-            class="px-2 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[var(--ceranet-blue)] transition-colors"
-            >Produits</a
-          >
-          <a
-            href="#avantages"
-            class="px-2 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[var(--ceranet-blue)] transition-colors"
-            >Avantages</a
-          >
-          <a
-            href="#commande"
-            class="px-2 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[var(--ceranet-blue)] transition-colors"
-            >Contact</a
-          >
-          <a
-            href="index-ar.html"
-            class="mt-2 px-2 py-2.5 rounded-lg border border-gray-200 text-center font-semibold text-gray-500"
-            >عربي</a
-          >
-        </div>
-      </div>
-    </nav>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HERO — bannière responsive (desktop / mobile) -->
-    <header>
-      <img
-        src="assets/img/baniere-desktop-fr.png"
-        alt="CERANET — L'expert du nettoyage céramique en Algérie"
-        class="hero-desktop w-full h-auto"
-      />
-      <img
-        src="assets/img/baniere-mobile-fr.png"
-        alt="CERANET — L'expert du nettoyage céramique en Algérie"
-        class="hero-mobile w-full h-auto"
-      />
-    </header>
+<!-- ============================================================
+     REMPLACER https://www.ceranet.dz PARTOUT PAR LE VRAI DOMAINE
+     (présent dans : canonical, hreflang, og:url, JSON-LD, sitemap)
+     ============================================================ -->
 
-    <!-- AVANT / APRÈS -->
-    <section
-      id="avant-apres"
-      class="py-14 sm:py-20 lg:py-24 px-5 sm:px-6 lg:px-10 bg-white"
-    >
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-10 reveal-up">
-          <span
-            class="font-utility text-xs font-bold tracking-[0.25em] uppercase text-[var(--ceranet-sky)]"
-            >La preuve en image</span
-          >
-          <h2
-            class="mt-3 text-3xl md:text-4xl font-black text-[var(--ceranet-blue-deep)]"
-          >
-            Avant / Après
-          </h2>
-          <div
-            class="h-1 w-16 accent-underline rounded-full mx-auto mt-5"
-          ></div>
-          <p class="mt-5 text-gray-500 leading-relaxed">
-            Faites glisser le curseur pour révéler la puissance de nettoyage
-            CERANET sur un carrelage réel.
-          </p>
-        </div>
+<title>CERANET — Nettoyant céramique professionnel, intérieur et extérieur | Algérie</title>
+<meta name="description" content="CERANET dissout calcaire, mousse et résidus gras sur le carrelage intérieur et extérieur. Deux formules professionnelles, DXS 6000 et DXS 6000N, en bidons de 5 L et 2 L. Commande et livraison dans les 58 wilayas.">
 
-        <div class="ba-wrap reveal-up" id="baSlider">
-          <div class="ba-layer ba-before">
-            <div class="ba-floor"></div>
-            <div class="ba-grime"></div>
-            <div class="ba-before-vignette"></div>
-          </div>
-          <div class="ba-clip" id="baClip">
-            <div class="ba-layer ba-after">
-              <div class="ba-floor"></div>
-            </div>
-          </div>
-          <span class="ba-tag ba-tag-before">Avant</span>
-          <span class="ba-tag ba-tag-after">Après</span>
-          <div class="ba-handle" id="baHandle">
-            <div class="ba-grip">
-              <svg
-                class="w-6 h-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-blue-deep)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 6-6 6 6 6M15 6l6 6-6 6" />
-              </svg>
-            </div>
-          </div>
-        </div>
+<link rel="canonical" href="https://www.ceranet.dz/">
+<link rel="alternate" hreflang="fr" href="https://www.ceranet.dz/">
+<link rel="alternate" hreflang="ar" href="https://www.ceranet.dz/index-ar.html">
+<link rel="alternate" hreflang="x-default" href="https://www.ceranet.dz/">
 
-        <p
-          class="mt-8 text-center text-gray-500 leading-relaxed max-w-2xl mx-auto"
-        >
-          Calcaire incrusté, mousse, résidus gras, traces de pollution : la
-          formule concentrée CERANET pénètre en profondeur dans la porosité du
-          carrelage pour dissoudre les dépôts les plus tenaces. Résultat : un
-          sol qui retrouve sa brillance d'origine, sans rinçage difficile et
-          sans laisser de film ni de traces.
-        </p>
-      </div>
-    </section>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CERANET">
+<meta property="og:locale" content="fr_DZ">
+<meta property="og:locale:alternate" content="ar_DZ">
+<meta property="og:url" content="https://www.ceranet.dz/">
+<meta property="og:title" content="CERANET — Nettoyant céramique professionnel, intérieur et extérieur">
+<meta property="og:description" content="Dissout calcaire, mousse et résidus gras sur le carrelage. Deux formules, en 5 L et 2 L. Livraison dans les 58 wilayas.">
+<meta property="og:image" content="https://www.ceranet.dz/assets/img/og-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Les deux bidons CERANET de 5 litres devant une terrasse carrelée.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A2846">
 
-    <!-- PRODUITS -->
-    <section
-      id="produits"
-      class="py-14 sm:py-20 lg:py-24 px-5 sm:px-6 lg:px-10 bg-gray-50 tile-pattern"
-    >
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
-          <span
-            class="font-utility text-xs font-bold tracking-[0.25em] uppercase text-[var(--ceranet-red)]"
-            >Notre gamme</span
-          >
-          <h2
-            class="mt-3 text-3xl md:text-4xl font-black text-[var(--ceranet-blue-deep)]"
-          >
-            Nos Produits
-          </h2>
-          <div
-            class="h-1 w-16 accent-underline rounded-full mx-auto mt-5"
-          ></div>
-          <p class="mt-5 text-gray-500 leading-relaxed">
-            Deux formules de nettoyant céramique professionnel, pensées pour
-            chaque surface — choisissez votre format ci-dessous.
-          </p>
-        </div>
+<link rel="icon" href="assets/img/ceranet-logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <!-- Carte Extérieur -->
-          <div class="pc-card pc-card--dark reveal-up" data-product="ext">
-            <div class="pc-blob"></div>
+<!-- Polices : préconnexion aux deux domaines, sinon le second coûte un aller-retour -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap">
 
-            <div class="pc-top">
-              <span class="pc-eyebrow">Extérieur</span>
-              <div class="pc-toggle">
-                <span class="pc-toggle-thumb"></span>
-                <button
-                  type="button"
-                  class="pc-toggle-btn is-active"
-                  data-format="5l"
-                >
-                  5L
-                </button>
-                <button type="button" class="pc-toggle-btn" data-format="2l">
-                  2L
-                </button>
-              </div>
-            </div>
+<link rel="stylesheet" href="assets/css/style.css">
 
-            <div class="pc-imgbox">
-              <img
-                src="./assets/img/bidon-bleu.png"
-                alt="CERANET Extérieur DXS 6000 — bidon 5L"
-                class="pc-img"
-                data-fmt="5l"
-                style="opacity: 1"
-              />
-              <img
-                src="assets/img/b2-2l.png"
-                alt="CERANET Extérieur DXS 6000 — format 2L"
-                class="pc-img"
-                data-fmt="2l"
-                style="opacity: 0; transform: scale(0.92)"
-              />
-            </div>
+<!-- Image LCP : le bidon bleu du hero, préchargé pour accélérer l'affichage -->
+<link rel="preload" as="image" type="image/avif"
+      href="assets/img/baniere-fr-desktop-1280.avif"
+      imagesrcset="assets/img/baniere-fr-mobile-640.avif 640w, assets/img/baniere-fr-mobile-864.avif 864w"
+      imagesizes="100vw" media="(max-width:767px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif"
+      href="assets/img/baniere-fr-desktop-1280.avif"
+      imagesrcset="assets/img/baniere-fr-desktop-960.avif 960w, assets/img/baniere-fr-desktop-1280.avif 1280w, assets/img/baniere-fr-desktop-1440.avif 1440w, assets/img/baniere-fr-desktop-1774.avif 1774w"
+      imagesizes="100vw" media="(min-width:768px)" fetchpriority="high">
 
-            <h3 class="pc-title text-2xl md:text-3xl">
-              CERANET Extérieur<br />DXS 6000
-            </h3>
-            <p class="pc-desc">
-              Le nettoyant céramique extérieur qui redonne à vos terrasses,
-              allées et margelles de piscine tout leur éclat. Une formule
-              concentrée qui dissout calcaire, mousse et résidus tenaces, sans
-              agresser le carrelage ni les joints.
-            </p>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+</head>
 
-            <span
-              class="pc-contenance"
-              data-contenance
-              data-5l="Contenance 5L · J5L"
-              data-2l="Contenance 2L · J2L"
-              >Contenance 5L · J5L</span
-            >
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
 
-            <a
-              href="https://wa.me/213560001183?text=Bonjour%2C%20je%20souhaite%20commander%20CERANET%20Ext%C3%A9rieur%20DXS%206000"
-              target="_blank"
-              class="pc-cta"
-              data-cta
-              data-wa-base="https://wa.me/213560001183?text=Bonjour%2C%20je%20souhaite%20commander%20CERANET%20Ext%C3%A9rieur%20DXS%206000"
-              data-label-5l="Commander le 5L"
-              data-label-2l="Commander le 2L"
-            >
-              <span data-cta-text>Commander le 5L</span>
-              <svg
-                class="w-4 h-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </a>
-          </div>
+<!-- ===================== NAVIGATION ===================== -->
+<header class="nav">
+  <div class="shell">
+    <div class="nav-row">
+      <a class="nav-logo" href="/" aria-label="CERANET, accueil">
+        <img src="assets/img/ceranet-logo.svg" alt="CERANET" width="160" height="42">
+      </a>
 
-          <!-- Carte Professionnel -->
-          <div class="pc-card pc-card--light reveal-up" data-product="pro">
-            <div class="pc-blob"></div>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#demonstration">Démonstration</a>
+        <a href="#gamme">La gamme</a>
+        <a href="#surfaces">Surfaces</a>
+        <a href="#utilisation">Utilisation</a>
+        <a href="#questions">Questions</a>
+      </nav>
 
-            <div class="pc-top">
-              <span class="pc-eyebrow">Intérieur · Extérieur</span>
-              <div class="pc-toggle">
-                <span class="pc-toggle-thumb"></span>
-                <button
-                  type="button"
-                  class="pc-toggle-btn is-active"
-                  data-format="5l"
-                >
-                  5L
-                </button>
-                <button type="button" class="pc-toggle-btn" data-format="2l">
-                  2L
-                </button>
-              </div>
-            </div>
-
-            <div class="pc-imgbox">
-              <img
-                src="assets/img/bidon-jaune.png"
-                alt="CERANET Professionnel DXS 6000N — bidon 5L"
-                class="pc-img"
-                data-fmt="5l"
-                style="opacity: 1"
-              />
-              <img
-                src="assets/img/b1-2l.png"
-                alt="CERANET Professionnel DXS 6000N — format 2L"
-                class="pc-img"
-                data-fmt="2l"
-                style="opacity: 0; transform: scale(0.92)"
-              />
-            </div>
-
-            <h3 class="pc-title text-2xl md:text-3xl">
-              CERANET Professionnel<br />DXS 6000N
-            </h3>
-            <p class="pc-desc">
-              Protéger, nettoyer, faire briller : la solution 3-en-1 pour toutes
-              les surfaces céramiques de la maison. Sa formule polyvalente
-              redonne éclat et brillance au carrelage, au grès cérame et à la
-              pierre, sans film gras ni traces.
-            </p>
-
-            <div class="pc-pills">
-              <span
-                class="pc-pill bg-[var(--ceranet-blue)]/10 text-[var(--ceranet-blue)]"
-                >Protéger</span
-              >
-              <span
-                class="pc-pill bg-[var(--ceranet-green)]/10 text-[var(--ceranet-green)]"
-                >Nettoyer</span
-              >
-              <span
-                class="pc-pill bg-[var(--ceranet-red)]/10 text-[var(--ceranet-red)]"
-                >Briller</span
-              >
-            </div>
-
-            <span
-              class="pc-contenance"
-              data-contenance
-              data-5l="Contenance 5L · J5L"
-              data-2l="Contenance 2L · J2L"
-              >Contenance 5L · J5L</span
-            >
-
-            <a
-              href="https://wa.me/213560001183?text=Bonjour%2C%20je%20souhaite%20commander%20CERANET%20Professionnel%20DXS%206000N"
-              target="_blank"
-              class="pc-cta"
-              data-cta
-              data-wa-base="https://wa.me/213560001183?text=Bonjour%2C%20je%20souhaite%20commander%20CERANET%20Professionnel%20DXS%206000N"
-              data-label-5l="Commander le 5L"
-              data-label-2l="Commander le 2L"
-            >
-              <span data-cta-text>Commander le 5L</span>
-              <svg
-                class="w-4 h-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AVANTAGES -->
-    <section
-      id="avantages"
-      class="py-14 sm:py-20 lg:py-24 px-5 sm:px-6 lg:px-10 bg-white"
-    >
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
-          <span
-            class="font-utility text-xs font-bold tracking-[0.25em] uppercase text-[var(--ceranet-green)]"
-            >Pourquoi CERANET</span
-          >
-          <h2
-            class="mt-3 text-3xl md:text-4xl font-black text-[var(--ceranet-blue-deep)]"
-          >
-            Nos Avantages
-          </h2>
-          <div
-            class="h-1 w-16 accent-underline rounded-full mx-auto mt-5"
-          ></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
-          >
-            <div
-              class="w-16 h-16 mx-auto rounded-2xl bg-[var(--ceranet-blue)]/10 flex items-center justify-center"
-            >
-              <svg
-                class="w-8 h-8"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-blue)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M6 3h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"
-                />
-                <path d="M9 3v6h6" />
-                <path d="M9 15h6M9 18h4" />
-              </svg>
-            </div>
-            <h3 class="mt-6 font-black text-lg text-[var(--ceranet-blue-deep)]">
-              Format Économique 5L
-            </h3>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              Un grand bidon pensé pour durer, sans compromis sur la puissance
-              de nettoyage. Aussi disponible en 2L pour un usage ponctuel.
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
-          >
-            <div
-              class="w-16 h-16 mx-auto rounded-2xl bg-[var(--ceranet-green)]/10 flex items-center justify-center"
-            >
-              <svg
-                class="w-8 h-8"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-green)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" />
-              </svg>
-            </div>
-            <h3 class="mt-6 font-black text-lg text-[var(--ceranet-blue-deep)]">
-              Efficacité Immédiate
-            </h3>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              Le résultat est visible dès la première application, sans effort
-              de frottement.
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
-          >
-            <div
-              class="w-16 h-16 mx-auto rounded-2xl bg-[var(--ceranet-red)]/10 flex items-center justify-center"
-            >
-              <svg
-                class="w-8 h-8"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-red)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M12 2 4.5 5v6c0 5 3.2 8.7 7.5 10 4.3-1.3 7.5-5 7.5-10V5L12 2z"
-                />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </div>
-            <h3 class="mt-6 font-black text-lg text-[var(--ceranet-blue-deep)]">
-              Qualité Professionnelle
-            </h3>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              Une formule éprouvée, conçue pour les exigences des professionnels
-              du nettoyage.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMMANDE / CONTACT -->
-    <section
-      id="commande"
-      class="py-14 sm:py-20 lg:py-24 px-5 sm:px-6 lg:px-10 bg-gray-50 tile-pattern"
-    >
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-10 reveal-up">
-          <span
-            class="font-utility text-xs font-bold tracking-[0.25em] uppercase text-[var(--ceranet-red)]"
-            >Passez commande</span
-          >
-          <h2
-            class="mt-3 text-3xl md:text-4xl font-black text-[var(--ceranet-blue-deep)]"
-          >
-            Contact & Commande
-          </h2>
-          <div
-            class="h-1 w-16 accent-underline rounded-full mx-auto mt-5"
-          ></div>
-          <p class="mt-5 text-gray-500 leading-relaxed">
-            Remplissez le formulaire, ou contactez-nous directement — nous vous
-            répondons rapidement.
-          </p>
-        </div>
-
-        <!-- Coordonnées directes -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-          <a
-            href="https://wa.me/213560001183"
-            target="_blank"
-            class="contact-chip bg-white rounded-2xl p-5 border border-gray-100 flex items-center gap-4"
-          >
-            <div
-              class="w-11 h-11 rounded-full bg-[#1FAA55]/10 flex items-center justify-center shrink-0"
-            >
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#1FAA55">
-                <path
-                  d="M17.5 14.4c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5.1-.1.3-.3.4-.5.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"
-                />
-                <path
-                  d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2z"
-                />
-              </svg>
-            </div>
-            <div>
-              <span
-                class="font-utility text-xs font-bold uppercase tracking-wide text-gray-400"
-                >WhatsApp</span
-              >
-              <p
-                class="font-utility font-bold text-[var(--ceranet-blue-deep)] text-sm"
-                dir="ltr"
-              >
-                +213 560 001 183
-              </p>
-            </div>
-          </a>
-          <a
-            href="tel:+213560001185"
-            class="contact-chip bg-white rounded-2xl p-5 border border-gray-100 flex items-center gap-4"
-          >
-            <div
-              class="w-11 h-11 rounded-full bg-[var(--ceranet-blue)]/10 flex items-center justify-center shrink-0"
-            >
-              <svg
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-blue)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
-                />
-              </svg>
-            </div>
-            <div>
-              <span
-                class="font-utility text-xs font-bold uppercase tracking-wide text-gray-400"
-                >Téléphone</span
-              >
-              <p
-                class="font-utility font-bold text-[var(--ceranet-blue-deep)] text-sm"
-                dir="ltr"
-              >
-                +213 560 001 185
-              </p>
-            </div>
-          </a>
-          <a
-            href="mailto:ramissaceram@gmail.com"
-            class="contact-chip bg-white rounded-2xl p-5 border border-gray-100 flex items-center gap-4"
-          >
-            <div
-              class="w-11 h-11 rounded-full bg-[var(--ceranet-red)]/10 flex items-center justify-center shrink-0"
-            >
-              <svg
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-red)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 4h16v16H4z" stroke="none" />
-                <path d="M22 6 12 13 2 6" />
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-              </svg>
-            </div>
-            <div class="min-w-0">
-              <span
-                class="font-utility text-xs font-bold uppercase tracking-wide text-gray-400"
-                >Email</span
-              >
-              <p
-                class="font-utility font-bold text-[var(--ceranet-blue-deep)] text-sm truncate"
-              >
-                ramissaceram@gmail.com
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <form
-          id="contactForm"
-          data-redirect="index-fr.html"
-          class="bg-white rounded-3xl p-6 sm:p-8 md:p-12 border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 shadow-sm"
-        >
-          <!-- Champs cachés Web3Forms : remplacez YOUR_WEB3FORMS_ACCESS_KEY par votre clé (gratuite sur web3forms.com) -->
-          <input
-            type="hidden"
-            name="access_key"
-            value="c2110998-9992-433b-8ac2-0254442b4442"
-          />
-          <input
-            type="hidden"
-            name="subject"
-            value="Nouvelle demande — Site CERANET (FR)"
-          />
-          <input type="hidden" name="from_name" value="Site CERANET" />
-
-          <!-- Honeypot anti-bot : champ invisible, jamais rempli par un humain.
-               Le nom "botcheck" est aussi reconnu automatiquement par Web3Forms. -->
-          <div class="hp-field" aria-hidden="true">
-            <label for="website">Ne pas remplir ce champ</label>
-            <input
-              type="text"
-              id="website"
-              name="botcheck"
-              tabindex="-1"
-              autocomplete="off"
-            />
-          </div>
-          <div class="flex flex-col gap-2" data-field>
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccName"
-              >Nom et prénom</label
-            >
-            <input
-              type="text"
-              id="ccName"
-              name="name"
-              placeholder="Votre nom complet"
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow"
-              data-required
-              required
-            />
-            <p class="field-error" data-error-for="ccName" hidden>
-              Merci d'indiquer votre nom et prénom.
-            </p>
-          </div>
-          <div class="flex flex-col gap-2" data-field>
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccPhone"
-              >Téléphone</label
-            >
-            <input
-              type="tel"
-              id="ccPhone"
-              name="phone"
-              placeholder="06 XX XX XX XX"
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow"
-              data-required
-              required
-            />
-            <p class="field-error" data-error-for="ccPhone" hidden>
-              Merci d'indiquer un numéro de téléphone.
-            </p>
-          </div>
-          <div class="md:col-span-2 flex flex-col gap-2" data-field>
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccWilaya"
-              >Wilaya</label
-            >
-            <select
-              id="ccWilaya"
-              name="wilaya"
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow text-gray-600"
-              data-required
-              required
-            >
-              <option value="">Sélectionnez votre wilaya</option>
-              <option value="01">01 - Adrar</option>
-              <option value="02">02 - Chlef</option>
-              <option value="03">03 - Laghouat</option>
-              <option value="04">04 - Oum El Bouaghi</option>
-              <option value="05">05 - Batna</option>
-              <option value="06">06 - Béjaïa</option>
-              <option value="07">07 - Biskra</option>
-              <option value="08">08 - Béchar</option>
-              <option value="09">09 - Blida</option>
-              <option value="10">10 - Bouira</option>
-              <option value="11">11 - Tamanrasset</option>
-              <option value="12">12 - Tébessa</option>
-              <option value="13">13 - Tlemcen</option>
-              <option value="14">14 - Tiaret</option>
-              <option value="15">15 - Tizi Ouzou</option>
-              <option value="16">16 - Alger</option>
-              <option value="17">17 - Djelfa</option>
-              <option value="18">18 - Jijel</option>
-              <option value="19">19 - Sétif</option>
-              <option value="20">20 - Saïda</option>
-              <option value="21">21 - Skikda</option>
-              <option value="22">22 - Sidi Bel Abbès</option>
-              <option value="23">23 - Annaba</option>
-              <option value="24">24 - Guelma</option>
-              <option value="25">25 - Constantine</option>
-              <option value="26">26 - Médéa</option>
-              <option value="27">27 - Mostaganem</option>
-              <option value="28">28 - M'Sila</option>
-              <option value="29">29 - Mascara</option>
-              <option value="30">30 - Ouargla</option>
-              <option value="31">31 - Oran</option>
-              <option value="32">32 - El Bayadh</option>
-              <option value="33">33 - Illizi</option>
-              <option value="34">34 - Bordj Bou Arréridj</option>
-              <option value="35">35 - Boumerdès</option>
-              <option value="36">36 - El Tarf</option>
-              <option value="37">37 - Tindouf</option>
-              <option value="38">38 - Tissemsilt</option>
-              <option value="39">39 - El Oued</option>
-              <option value="40">40 - Khenchela</option>
-              <option value="41">41 - Souk Ahras</option>
-              <option value="42">42 - Tipaza</option>
-              <option value="43">43 - Mila</option>
-              <option value="44">44 - Aïn Defla</option>
-              <option value="45">45 - Naâma</option>
-              <option value="46">46 - Aïn Témouchent</option>
-              <option value="47">47 - Ghardaïa</option>
-              <option value="48">48 - Relizane</option>
-              <option value="49">49 - Timimoun</option>
-              <option value="50">50 - Bordj Badji Mokhtar</option>
-              <option value="51">51 - Ouled Djellal</option>
-              <option value="52">52 - Béni Abbès</option>
-              <option value="53">53 - In Salah</option>
-              <option value="54">54 - In Guezzam</option>
-              <option value="55">55 - Touggourt</option>
-              <option value="56">56 - Djanet</option>
-              <option value="57">57 - El M'Ghair</option>
-              <option value="58">58 - El Meniaa</option>
-            </select>
-          </div>
-          <div class="md:col-span-2 flex flex-col gap-2" data-field>
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccAddress"
-              >Adresse de livraison</label
-            >
-            <input
-              type="text"
-              id="ccAddress"
-              name="address"
-              placeholder="Rue, quartier, ville"
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow"
-              data-required
-              required
-            />
-            <p class="field-error" data-error-for="ccAddress" hidden>
-              Merci d'indiquer votre adresse de livraison.
-            </p>
-          </div>
-          <div class="md:col-span-2 flex flex-col gap-2">
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccMessage"
-              >Message
-              <span class="text-gray-400 font-normal"
-                >(Obligatoire)</span
-              ></label
-            >
-            <textarea
-              required
-              id="ccMessage"
-              name="message"
-              rows="4"
-              placeholder="Précisez votre besoin, la quantité souhaitée (5L ou 2L), ou toute autre question..."
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow resize-none"
-            ></textarea>
-          </div>
-
-          <!-- Mini-défi anti-robot 100% JS : calcul simple généré aléatoirement,
-               vérifié réellement avant l'envoi (pas juste une case à cocher). -->
-          <div class="md:col-span-2 flex flex-col gap-2" data-field>
-            <label class="font-utility text-sm font-semibold text-gray-600"
-              >Vérification anti-robot</label
-            >
-            <div id="captchaBox" class="captcha-check">
-              <div class="captcha-icon-wrap">
-                <svg
-                  class="w-5 h-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--ceranet-blue)"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M12 2 4.5 5v6c0 5 3.2 8.7 7.5 10 4.3-1.3 7.5-5 7.5-10V5L12 2z"
-                  />
-                </svg>
-              </div>
-              <div class="captcha-question">
-                <p class="captcha-label">
-                  Combien font
-                  <span id="captchaA">3</span> + <span id="captchaB">5</span> ?
-                </p>
-                <p class="captcha-sub">Prouvez que vous n'êtes pas un robot</p>
-              </div>
-              <input
-                type="number"
-                inputmode="numeric"
-                id="captchaAnswer"
-                name="captcha_answer"
-                class="captcha-input"
-                placeholder="?"
-                autocomplete="off"
-              />
-              <button
-                type="button"
-                id="captchaRefresh"
-                class="captcha-refresh"
-                aria-label="Nouveau calcul"
-                title="Nouveau calcul"
-              >
-                <svg
-                  class="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--ceranet-blue-deep)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M21 12a9 9 0 1 1-3-6.7M21 3v6h-6" />
-                </svg>
-              </button>
-            </div>
-            <p class="field-error" data-error-for="captchaAnswer" hidden>
-              Réponse incorrecte, réessayez.
-            </p>
-          </div>
-
-          <p
-            data-form-error
-            hidden
-            class="md:col-span-2 text-sm font-utility font-semibold text-[var(--ceranet-red)] bg-[var(--ceranet-red)]/10 rounded-xl px-4 py-3"
-          >
-            Une erreur est survenue lors de l'envoi. Merci de réessayer, ou
-            contactez-nous directement via WhatsApp ci-dessous.
-          </p>
-
-          <div class="md:col-span-2 flex flex-col sm:flex-row gap-4 mt-4">
-            <button
-              type="submit"
-              data-sending-label="Envoi en cours..."
-              class="cta-btn flex-1 text-white font-utility font-bold py-4 rounded-full transition-colors"
-            >
-              Valider ma commande
-            </button>
-            <a
-              href="https://wa.me/213560001183"
-              target="_blank"
-              class="wa-btn flex-1 flex items-center justify-center gap-2 text-white font-utility font-bold py-4 rounded-full transition-colors"
-            >
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.5 14.4c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5.1-.1.3-.3.4-.5.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"
-                />
-                <path
-                  d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2z"
-                />
-              </svg>
-              Contact via WhatsApp
-            </a>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-[var(--ceranet-blue-deep)] py-12 px-5 sm:px-6 lg:px-10">
-      <div
-        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6"
-      >
-        <div class="bg-white/95 rounded-full px-4 py-2">
-          <img
-            src="assets/img/ceranet-logo.svg"
-            alt="CERANET"
-            class="h-7 w-auto mix-blend-multiply"
-          />
-        </div>
-        <p
-          class="font-utility text-xs text-blue-200/70 text-center md:text-right"
-        >
-          © 2026 CERANET Propre — Tous droits réservés.
-        </p>
-      </div>
-    </footer>
-
-    <!-- OVERLAY DE CONFIRMATION D'ENVOI -->
-    <div id="successOverlay" class="success-overlay">
-      <div class="max-w-sm">
-        <div class="success-check" data-success-anim>
-          <svg viewBox="0 0 52 52">
-            <circle cx="26" cy="26" r="23"></circle>
-            <path d="M15 27 L23 35 L38 18"></path>
-          </svg>
-        </div>
-        <h3 class="text-white text-2xl font-black" data-success-anim>
-          Votre message a été envoyé !
-        </h3>
-        <p class="text-blue-100 mt-3 leading-relaxed" data-success-anim>
-          Merci de nous avoir contactés. Notre équipe CERANET reviendra vers
-          vous très rapidement.
-        </p>
-        <p class="text-blue-200/70 text-sm mt-6 font-utility" data-success-anim>
-          Redirection dans <span data-countdown>4</span>s…
-        </p>
+      <div class="nav-actions">
+        <a class="lang-switch" href="index-ar.html" hreflang="ar" lang="ar">العربية</a>
+        <a class="btn btn-primary btn-sm nav-desktop-cta" href="#commande">Commander</a>
+        <button class="burger" id="burger" type="button"
+                aria-expanded="false" aria-controls="navMobile" aria-label="Ouvrir le menu">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/animations.js"></script>
-    <script src="assets/js/form.js"></script>
-  </body>
+    <nav class="nav-mobile" id="navMobile" aria-label="Navigation mobile">
+      <a href="#demonstration">Démonstration</a>
+      <a href="#gamme">La gamme</a>
+      <a href="#surfaces">Surfaces</a>
+      <a href="#utilisation">Utilisation</a>
+      <a href="#questions">Questions</a>
+      <a href="#commande">Commander</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO =====================
+     Le titre est du vrai texte HTML, plus une image :
+     c'est ce que Google et les moteurs de réponse lisent. -->
+<section class="hero">
+      <div class="hero-banner">
+        <picture>
+          <source media="(max-width:767px)" type="image/avif"
+                  srcset="assets/img/baniere-fr-mobile-640.avif 640w, assets/img/baniere-fr-mobile-864.avif 864w"
+                  sizes="100vw">
+          <source media="(max-width:767px)" type="image/webp"
+                  srcset="assets/img/baniere-fr-mobile-640.webp 640w, assets/img/baniere-fr-mobile-864.webp 864w"
+                  sizes="100vw">
+          <source type="image/avif"
+                  srcset="assets/img/baniere-fr-desktop-960.avif 960w, assets/img/baniere-fr-desktop-1280.avif 1280w, assets/img/baniere-fr-desktop-1440.avif 1440w, assets/img/baniere-fr-desktop-1774.avif 1774w"
+                  sizes="100vw">
+          <source type="image/webp"
+                  srcset="assets/img/baniere-fr-desktop-960.webp 960w, assets/img/baniere-fr-desktop-1280.webp 1280w, assets/img/baniere-fr-desktop-1440.webp 1440w, assets/img/baniere-fr-desktop-1774.webp 1774w"
+                  sizes="100vw">
+          <img src="assets/img/baniere-fr-desktop-960.jpg" width="1774" height="887"
+               fetchpriority="high" decoding="async" alt="CERANET, l'expert du nettoyage céramique : brillance éclatante, protection longue durée, formule puissante, pour l'intérieur et l'extérieur.">
+        </picture>
+      </div>
+
+      <div class="shell">
+        <div class="hero-intro">
+          <div class="grout-rule"></div>
+          <h1>Le nettoyant céramique qui redonne son éclat au carrelage</h1>
+          <p class="lead">
+            CERANET dissout le calcaire, la mousse et les résidus gras sur le carrelage
+            intérieur et extérieur. Deux formules professionnelles, en bidons de 5 L et 2 L,
+            livrées dans les 58 wilayas d'Algérie.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/213798763943?text=Bonjour%2C%20je%20souhaite%20commander%20CERANET"
+               target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2zm5.5-5.8c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg>
+              Commander sur WhatsApp
+            </a>
+            <a class="btn btn-outline" href="#gamme">Voir les deux formules</a>
+          </div>
+
+          <dl class="hero-spec">
+            <div><dt>Gamme</dt><dd>2 formules</dd></div>
+            <div><dt>Contenances</dt><dd>5 L et 2 L</dd></div>
+            <div><dt>Surfaces</dt><dd>Intérieur et extérieur</dd></div>
+            <div><dt>Livraison</dt><dd>58 wilayas</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DÉMONSTRATION ===================== -->
+<section class="demo tile-pattern" id="demonstration">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>Ce que ça change sur un carrelage encrassé</h2>
+      <p class="lead">
+        Faites glisser le curseur pour comparer un sol chargé de dépôts et le même sol
+        après nettoyage. Le calcaire et les traces grasses partent sans frottement prolongé.
+      </p>
+    </div>
+
+    <!-- À FAIRE : remplacer cette simulation par deux vraies photos avant / après
+         prises chez un client. Une preuve réelle vaut beaucoup plus, autant pour
+         la confiance des visiteurs que pour le référencement. -->
+    <div class="ba reveal" id="ba" style="--pos:50%">
+      <div class="ba-layer ba-before">
+        <div class="ba-floor" aria-hidden="true"></div>
+        <div class="ba-grime" aria-hidden="true"></div>
+      </div>
+      <div class="ba-clip">
+        <div class="ba-layer ba-after">
+          <div class="ba-floor" aria-hidden="true"></div>
+        </div>
+      </div>
+      <span class="ba-tag ba-tag-before">Avant</span>
+      <span class="ba-tag ba-tag-after">Après</span>
+      <button class="ba-handle" id="baHandle" type="button"
+              role="slider" tabindex="0"
+              aria-label="Comparer avant et après"
+              aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <span class="ba-grip" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0A2846" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg>
+        </span>
+      </button>
+    </div>
+
+    <p class="demo-note">
+      Simulation interactive du contraste avant et après nettoyage. Le résultat réel
+      dépend du type de carrelage, de sa porosité et de l'ancienneté des dépôts.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== LA GAMME ===================== -->
+<section id="gamme">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>Deux formules, une pour chaque surface</h2>
+      <p class="lead">
+        La formule extérieure attaque les dépôts d'eau et de pollution des terrasses.
+        La formule professionnelle nettoie, protège et fait briller partout dans la maison.
+        Chacune existe en 5 L et en 2 L.
+      </p>
+    </div>
+
+    <div class="range-grid">
+
+      <!-- ---------- DXS 6000 · Extérieur ---------- -->
+      <article class="product product--ext reveal" data-product="ext">
+        <div class="product-head">
+          <span class="product-ref">Extérieur</span>
+          <div class="sizes" role="group" aria-label="Choisir la contenance">
+            <button type="button" data-for="5l" aria-pressed="true">5 L</button>
+            <button type="button" data-for="2l" aria-pressed="false">2 L</button>
+          </div>
+        </div>
+
+        <div class="product-shot">
+          <picture data-size="5l" class="is-shown">
+            <source type="image/avif" srcset="assets/img/bidon-bleu-5l-520.avif">
+            <source type="image/webp" srcset="assets/img/bidon-bleu-5l-520.webp">
+            <img src="assets/img/bidon-bleu-5l-520.png" width="592" height="900"
+                 loading="lazy" decoding="async"
+                 alt="CERANET Extérieur DXS 6000, bidon de 5 litres.">
+          </picture>
+          <picture data-size="2l">
+            <source type="image/avif" srcset="assets/img/bidon-bleu-2l-520.avif">
+            <source type="image/webp" srcset="assets/img/bidon-bleu-2l-520.webp">
+            <img src="assets/img/bidon-bleu-2l-520.png" width="573" height="900"
+                 loading="lazy" decoding="async"
+                 alt="CERANET Extérieur DXS 6000, bidon de 2 litres.">
+          </picture>
+        </div>
+
+        <h3>CERANET Extérieur DXS 6000</h3>
+        <p class="product-desc">
+          Pour les terrasses, les allées et les margelles de piscine. Sa formule concentrée
+          dissout le calcaire, la mousse et les résidus tenaces laissés par la pluie et la
+          pollution, sans agresser le carrelage ni les joints.
+        </p>
+
+        <ul class="product-facts">
+          <li><span>Référence</span><span>DXS 6000</span></li>
+          <li><span>Usage</span><span>Extérieur</span></li>
+          <li><span>Contenance</span><span data-volume data-5l="5 litres" data-2l="2 litres">5 litres</span></li>
+        </ul>
+
+        <a class="btn btn-primary" data-cta
+           data-wa="https://wa.me/213798763943?text=Bonjour%2C%20je%20souhaite%20commander%20CERANET%20Ext%C3%A9rieur%20DXS%206000"
+           data-5l="Commander le 5 L" data-2l="Commander le 2 L"
+           href="https://wa.me/213798763943?text=Bonjour%2C%20je%20souhaite%20commander%20CERANET%20Ext%C3%A9rieur%20DXS%206000%20(5L)"
+           target="_blank" rel="noopener">
+          <span data-cta-text>Commander le 5 L</span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- ---------- DXS 6000N · Professionnel ---------- -->
+      <article class="product product--pro reveal" data-product="pro">
+        <div class="product-head">
+          <span class="product-ref">Intérieur et extérieur</span>
+          <div class="sizes" role="group" aria-label="Choisir la contenance">
+            <button type="button" data-for="5l" aria-pressed="true">5 L</button>
+            <button type="button" data-for="2l" aria-pressed="false">2 L</button>
+          </div>
+        </div>
+
+        <div class="product-shot">
+          <picture data-size="5l" class="is-shown">
+            <source type="image/avif" srcset="assets/img/bidon-jaune-5l-520.avif">
+            <source type="image/webp" srcset="assets/img/bidon-jaune-5l-520.webp">
+            <img src="assets/img/bidon-jaune-5l-520.png" width="596" height="900"
+                 loading="lazy" decoding="async"
+                 alt="CERANET Professionnel DXS 6000N, bidon de 5 litres.">
+          </picture>
+          <picture data-size="2l">
+            <source type="image/avif" srcset="assets/img/bidon-jaune-2l-520.avif">
+            <source type="image/webp" srcset="assets/img/bidon-jaune-2l-520.webp">
+            <img src="assets/img/bidon-jaune-2l-520.png" width="574" height="900"
+                 loading="lazy" decoding="async"
+                 alt="CERANET Professionnel DXS 6000N, bidon de 2 litres.">
+          </picture>
+        </div>
+
+        <h3>CERANET Professionnel DXS 6000N</h3>
+        <p class="product-desc">
+          Protéger, nettoyer, faire briller : la solution 3 en 1 pour toutes les surfaces
+          céramiques de la maison. Elle redonne son éclat au carrelage, au grès cérame et
+          à la pierre, sans laisser de film gras ni de traces.
+        </p>
+
+        <ul class="product-facts">
+          <li><span>Référence</span><span>DXS 6000N</span></li>
+          <li><span>Usage</span><span>Intérieur et extérieur</span></li>
+          <li><span>Action</span><span>Protège, nettoie, fait briller</span></li>
+          <li><span>Contenance</span><span data-volume data-5l="5 litres" data-2l="2 litres">5 litres</span></li>
+        </ul>
+
+        <a class="btn btn-ink" data-cta
+           data-wa="https://wa.me/213798763943?text=Bonjour%2C%20je%20souhaite%20commander%20CERANET%20Professionnel%20DXS%206000N"
+           data-5l="Commander le 5 L" data-2l="Commander le 2 L"
+           href="https://wa.me/213798763943?text=Bonjour%2C%20je%20souhaite%20commander%20CERANET%20Professionnel%20DXS%206000N%20(5L)"
+           target="_blank" rel="noopener">
+          <span data-cta-text>Commander le 5 L</span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SURFACES ===================== -->
+<section class="spec" id="surfaces">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>Sur quelles surfaces l'utiliser</h2>
+      <p class="lead">
+        CERANET est prévu pour les surfaces céramiques et minérales, à l'intérieur comme
+        à l'extérieur. En cas de doute sur un revêtement, faites d'abord un essai sur une
+        petite zone peu visible.
+      </p>
+    </div>
+
+    <div class="spec-grid reveal">
+      <div>
+        <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"/></svg>
+        <h3>Carrelage et grès cérame</h3>
+        <p>Sols et murs des cuisines, salles de bain, couloirs et pièces à vivre.</p>
+      </div>
+      <div>
+        <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/></svg>
+        <h3>Terrasses et allées</h3>
+        <p>Dalles extérieures noircies par la pluie, la poussière et la pollution.</p>
+      </div>
+      <div>
+        <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16c2 0 2.5-1.5 5-1.5S9.5 16 12 16s2.5-1.5 5-1.5S19.5 16 22 16M2 20c2 0 2.5-1.5 5-1.5S9.5 20 12 20s2.5-1.5 5-1.5S19.5 20 22 20M7 14V5a2 2 0 1 1 4 0M13 14V5a2 2 0 1 1 4 0"/></svg>
+        <h3>Margelles de piscine</h3>
+        <p>Contours et plages de piscine marqués par le calcaire et les dépôts d'eau.</p>
+      </div>
+      <div>
+        <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18"/><path d="M4 4h16v16H4z"/></svg>
+        <h3>Joints encrassés</h3>
+        <p>Le produit pénètre dans les joints pour déloger les dépôts sans les attaquer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== UTILISATION ===================== -->
+<section id="utilisation">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>Comment l'utiliser en trois étapes</h2>
+      <p class="lead">
+        La méthode est la même pour les deux formules. Respectez toujours la dilution
+        indiquée sur l'étiquette du bidon et travaillez dans une pièce aérée.
+      </p>
+    </div>
+
+    <!-- À FAIRE : remplacer les indications de dilution et de temps de pose par
+         celles exactement inscrites sur l'étiquette avant la mise en ligne. -->
+    <div class="steps reveal">
+      <div class="step">
+        <h3>Préparer la surface</h3>
+        <p>Balayez ou aspirez pour retirer la poussière, le sable et les gravillons. Le produit agit mieux sur un sol débarrassé des résidus secs.</p>
+      </div>
+      <div class="step">
+        <h3>Diluer et appliquer</h3>
+        <p>Diluez dans l'eau selon le dosage de l'étiquette, appliquez sur la surface et laissez agir le temps indiqué, sans laisser sécher.</p>
+      </div>
+      <div class="step">
+        <h3>Frotter et rincer</h3>
+        <p>Passez la brosse sur les zones les plus encrassées, puis rincez à l'eau claire. Aucun film gras ne reste sur le carrelage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUESTIONS ===================== -->
+<section class="faq tile-pattern" id="questions">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>Questions fréquentes</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <details>
+        <summary>Quelle est la différence entre DXS 6000 et DXS 6000N ?</summary>
+        <div class="faq-answer">
+          <p>DXS 6000 est la formule extérieure : elle est pensée pour les terrasses, les allées et les margelles de piscine, où les dépôts viennent de la pluie, du calcaire et de la pollution. DXS 6000N est la formule professionnelle 3 en 1, utilisable à l'intérieur comme à l'extérieur, qui nettoie, protège et fait briller le carrelage de toute la maison.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>CERANET abîme-t-il les joints du carrelage ?</summary>
+        <div class="faq-answer">
+          <p>Non : la formule est conçue pour déloger les dépôts logés dans les joints sans les attaquer. Comme pour tout produit de nettoyage, faites un essai sur une petite zone peu visible avant de traiter une grande surface, en particulier sur un revêtement ancien ou poreux.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Sur quelles surfaces peut-on l'utiliser ?</summary>
+        <div class="faq-answer">
+          <p>Carrelage, grès cérame, pierre, dalles de terrasse, allées et margelles de piscine, à l'intérieur comme à l'extérieur. Le produit n'est pas prévu pour le parquet, les surfaces textiles ni les métaux non protégés.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Faut-il choisir le 5 L ou le 2 L ?</summary>
+        <div class="faq-answer">
+          <p>Le bidon de 5 litres est le format économique : il convient aux grandes surfaces, aux terrasses et à un usage régulier, notamment pour les professionnels du nettoyage. Le 2 litres est adapté à un usage ponctuel ou à un premier essai.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Livrez-vous partout en Algérie ?</summary>
+        <div class="faq-answer">
+          <p>Oui, nous livrons dans les 58 wilayas. Indiquez votre wilaya et votre adresse dans le formulaire de commande, ou envoyez-les directement par WhatsApp au +213 798 763 943.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Comment passer commande ?</summary>
+        <div class="faq-answer">
+          <p>Deux possibilités : le formulaire en bas de cette page, ou WhatsApp au +213 798 763 943. Dans les deux cas, nous vous confirmons le prix, le délai de livraison et les modalités de paiement avant l'expédition.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMMANDE ===================== -->
+<section id="commande">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>Commander CERANET</h2>
+      <p class="lead">
+        Remplissez le formulaire et nous vous rappelons pour confirmer la commande.
+        Pour une réponse immédiate, écrivez-nous sur WhatsApp.
+      </p>
+    </div>
+
+    <div class="order-grid">
+      <form class="form" id="orderForm" data-redirect="index.html" novalidate>
+        <!-- Clé publique Web3Forms : c'est normal qu'elle soit visible, elle ne
+             donne accès à rien d'autre qu'à l'envoi vers l'adresse configurée. -->
+        <input type="hidden" name="access_key" value="c2110998-9992-433b-8ac2-0254442b4442">
+        <input type="hidden" name="subject" value="Nouvelle commande — Site CERANET (FR)">
+        <input type="hidden" name="from_name" value="Site CERANET">
+
+        <div class="honeypot" aria-hidden="true">
+          <label for="website">Ne remplissez pas ce champ</label>
+          <input type="text" id="website" name="botcheck" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="fName">Nom et prénom</label>
+          <input type="text" id="fName" name="name" autocomplete="name"
+                 placeholder="Votre nom complet" data-required>
+          <p class="error" data-error-for="fName" hidden>Indiquez votre nom et prénom.</p>
+        </div>
+
+        <div class="field">
+          <label for="fPhone">Téléphone</label>
+          <input type="tel" id="fPhone" name="phone" autocomplete="tel"
+                 placeholder="06 XX XX XX XX" data-required>
+          <p class="error" data-error-for="fPhone" hidden>Indiquez un numéro de téléphone.</p>
+        </div>
+
+        <div class="field">
+          <label for="fProduct">Produit souhaité</label>
+          <select id="fProduct" name="product" data-required>
+            <option value="">Choisissez un produit</option>
+            <option>CERANET Extérieur DXS 6000 — 5 L</option>
+            <option>CERANET Extérieur DXS 6000 — 2 L</option>
+            <option>CERANET Professionnel DXS 6000N — 5 L</option>
+            <option>CERANET Professionnel DXS 6000N — 2 L</option>
+            <option>Je ne sais pas encore</option>
+          </select>
+          <p class="error" data-error-for="fProduct" hidden>Choisissez un produit.</p>
+        </div>
+
+        <div class="field">
+          <label for="fWilaya">Wilaya</label>
+          <select id="fWilaya" name="wilaya" data-required>
+            <option value="">Choisissez votre wilaya</option>
+            <option value="01">01 - Adrar</option>
+            <option value="02">02 - Chlef</option>
+            <option value="03">03 - Laghouat</option>
+            <option value="04">04 - Oum El Bouaghi</option>
+            <option value="05">05 - Batna</option>
+            <option value="06">06 - Béjaïa</option>
+            <option value="07">07 - Biskra</option>
+            <option value="08">08 - Béchar</option>
+            <option value="09">09 - Blida</option>
+            <option value="10">10 - Bouira</option>
+            <option value="11">11 - Tamanrasset</option>
+            <option value="12">12 - Tébessa</option>
+            <option value="13">13 - Tlemcen</option>
+            <option value="14">14 - Tiaret</option>
+            <option value="15">15 - Tizi Ouzou</option>
+            <option value="16">16 - Alger</option>
+            <option value="17">17 - Djelfa</option>
+            <option value="18">18 - Jijel</option>
+            <option value="19">19 - Sétif</option>
+            <option value="20">20 - Saïda</option>
+            <option value="21">21 - Skikda</option>
+            <option value="22">22 - Sidi Bel Abbès</option>
+            <option value="23">23 - Annaba</option>
+            <option value="24">24 - Guelma</option>
+            <option value="25">25 - Constantine</option>
+            <option value="26">26 - Médéa</option>
+            <option value="27">27 - Mostaganem</option>
+            <option value="28">28 - M'Sila</option>
+            <option value="29">29 - Mascara</option>
+            <option value="30">30 - Ouargla</option>
+            <option value="31">31 - Oran</option>
+            <option value="32">32 - El Bayadh</option>
+            <option value="33">33 - Illizi</option>
+            <option value="34">34 - Bordj Bou Arréridj</option>
+            <option value="35">35 - Boumerdès</option>
+            <option value="36">36 - El Tarf</option>
+            <option value="37">37 - Tindouf</option>
+            <option value="38">38 - Tissemsilt</option>
+            <option value="39">39 - El Oued</option>
+            <option value="40">40 - Khenchela</option>
+            <option value="41">41 - Souk Ahras</option>
+            <option value="42">42 - Tipaza</option>
+            <option value="43">43 - Mila</option>
+            <option value="44">44 - Aïn Defla</option>
+            <option value="45">45 - Naâma</option>
+            <option value="46">46 - Aïn Témouchent</option>
+            <option value="47">47 - Ghardaïa</option>
+            <option value="48">48 - Relizane</option>
+            <option value="49">49 - Timimoun</option>
+            <option value="50">50 - Bordj Badji Mokhtar</option>
+            <option value="51">51 - Ouled Djellal</option>
+            <option value="52">52 - Béni Abbès</option>
+            <option value="53">53 - In Salah</option>
+            <option value="54">54 - In Guezzam</option>
+            <option value="55">55 - Touggourt</option>
+            <option value="56">56 - Djanet</option>
+            <option value="57">57 - El M'Ghair</option>
+            <option value="58">58 - El Meniaa</option>
+          </select>
+          <p class="error" data-error-for="fWilaya" hidden>Choisissez votre wilaya.</p>
+        </div>
+
+        <div class="field field--wide">
+          <label for="fAddress">Adresse de livraison</label>
+          <input type="text" id="fAddress" name="address" autocomplete="street-address"
+                 placeholder="Rue, quartier, ville" data-required>
+          <p class="error" data-error-for="fAddress" hidden>Indiquez votre adresse de livraison.</p>
+        </div>
+
+        <div class="field field--wide">
+          <label for="fMessage">Message <span class="optional">(facultatif)</span></label>
+          <textarea id="fMessage" name="message" rows="4"
+                    placeholder="Quantité souhaitée, type de surface à traiter, question…"></textarea>
+        </div>
+
+        <div class="field field--wide">
+          <label for="challengeAnswer">Vérification</label>
+          <div class="challenge" id="challenge">
+            <p class="challenge-q">
+              Combien font <span id="challengeA">3</span> + <span id="challengeB">5</span> ?
+              <small>Une simple addition, pour écarter les robots.</small>
+            </p>
+            <input type="number" inputmode="numeric" id="challengeAnswer"
+                   name="challenge_answer" placeholder="?" autocomplete="off"
+                   aria-label="Résultat de l'addition">
+            <button type="button" id="challengeRenew" aria-label="Changer le calcul">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0A2846" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v6h-6"/></svg>
+            </button>
+          </div>
+          <p class="error" data-error-for="challengeAnswer" hidden>Le résultat ne correspond pas, réessayez.</p>
+        </div>
+
+        <p class="form-error" hidden>
+          L'envoi n'a pas abouti. Réessayez, ou contactez-nous directement sur WhatsApp.
+        </p>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit" data-sending="Envoi en cours…">
+            Envoyer ma commande
+          </button>
+          <a class="btn btn-wa" href="https://wa.me/213798763943" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2zm5.5-5.8c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg>
+            Écrire sur WhatsApp
+          </a>
+        </div>
+      </form>
+
+      <aside class="contact-card reveal">
+        <h3>Nous joindre directement</h3>
+        <ul class="contact-list">
+          <li>
+            <a href="https://wa.me/213798763943" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="#1FAA55" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2z"/></svg>
+              <span><span class="label">WhatsApp</span><span class="value" dir="ltr">+213 798 763 943</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+213560001185">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1D4B7F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              <span><span class="label">Téléphone</span><span class="value" dir="ltr">+213 560 001 185</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:ramissaceram@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D23227" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              <span><span class="label">E-mail</span><span class="value">ramissaceram@gmail.com</span></span>
+            </a>
+          </li>
+          <li>
+            <div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#51A959" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <span><span class="label">Zone de livraison</span><span class="value">Les 58 wilayas d'Algérie</span></span>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== PIED DE PAGE ===================== -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo"><img src="assets/img/ceranet-logo.svg" alt="CERANET" width="115" height="30" loading="lazy"></span>
+        <p>Nettoyants céramiques professionnels pour le carrelage intérieur et extérieur, distribués en Algérie.</p>
+      </div>
+      <div>
+        <h3>La gamme</h3>
+        <ul>
+          <li><a href="#gamme">CERANET Extérieur DXS 6000</a></li>
+          <li><a href="#gamme">CERANET Professionnel DXS 6000N</a></li>
+          <li><a href="#surfaces">Surfaces compatibles</a></li>
+          <li><a href="#utilisation">Mode d'emploi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="https://wa.me/213798763943" target="_blank" rel="noopener">WhatsApp <span dir="ltr">+213 798 763 943</span></a></li>
+          <li><a href="tel:+213560001185"><span dir="ltr">+213 560 001 185</span></a></li>
+          <li><a href="mailto:ramissaceram@gmail.com">ramissaceram@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Langue</h3>
+        <ul>
+          <li><a href="/" hreflang="fr">Français</a></li>
+          <li><a href="index-ar.html" hreflang="ar" lang="ar">العربية</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2026 CERANET Propre. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<!-- Confirmation d'envoi -->
+<div class="sent" id="sent" role="status" aria-live="polite">
+  <div>
+    <div class="sent-mark">
+      <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23"/><path d="M15 27l8 8 15-17"/></svg>
+    </div>
+    <h2>Commande envoyée</h2>
+    <p>Merci. Nous vous rappelons rapidement pour confirmer le produit, le prix et le délai de livraison.</p>
+    <p style="margin-top:1.5rem;font-size:.88rem;opacity:.75">Retour à l'accueil dans <span data-countdown>5</span> s</p>
+  </div>
+</div>
+
+<!-- ============================================================
+     DONNÉES STRUCTURÉES
+     Elles décrivent l'entreprise et les produits aux moteurs de
+     recherche et aux assistants IA. À COMPLÉTER : adresse postale
+     exacte, prix, et liens des pages Facebook / Instagram.
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.ceranet.dz/#organisation",
+      "name": "CERANET",
+      "alternateName": "CERANET Propre",
+      "url": "https://www.ceranet.dz/",
+      "logo": "https://www.ceranet.dz/assets/img/icon-512.png",
+      "image": "https://www.ceranet.dz/assets/img/og-fr.jpg",
+      "description": "Nettoyants céramiques professionnels pour carrelage intérieur et extérieur, distribués en Algérie.",
+      "email": "ramissaceram@gmail.com",
+      "telephone": "+213560001185",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "DZ"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Algérie"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+213798763943",
+        "contactType": "sales",
+        "availableLanguage": ["fr", "ar"],
+        "areaServed": "DZ"
+      }]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ceranet.dz/#site",
+      "url": "https://www.ceranet.dz/",
+      "name": "CERANET",
+      "inLanguage": "fr",
+      "publisher": { "@id": "https://www.ceranet.dz/#organisation" }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.ceranet.dz/#dxs6000",
+      "name": "CERANET Extérieur DXS 6000",
+      "sku": "DXS 6000",
+      "category": "Nettoyant céramique extérieur",
+      "description": "Nettoyant céramique extérieur concentré pour terrasses, allées et margelles de piscine. Dissout le calcaire, la mousse et les résidus tenaces sans agresser les joints. Disponible en bidons de 5 litres et 2 litres.",
+      "image": "https://www.ceranet.dz/assets/img/bidon-bleu-5l-900.webp",
+      "brand": { "@id": "https://www.ceranet.dz/#organisation" },
+      "hasMeasurement": [
+        { "@type": "QuantitativeValue", "name": "Contenance", "value": 5, "unitCode": "LTR" },
+        { "@type": "QuantitativeValue", "name": "Contenance", "value": 2, "unitCode": "LTR" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.ceranet.dz/#dxs6000n",
+      "name": "CERANET Professionnel DXS 6000N",
+      "sku": "DXS 6000N",
+      "category": "Nettoyant céramique intérieur et extérieur",
+      "description": "Nettoyant céramique professionnel 3 en 1 pour l'intérieur et l'extérieur : protège, nettoie et fait briller le carrelage, le grès cérame et la pierre, sans film gras ni traces. Disponible en bidons de 5 litres et 2 litres.",
+      "image": "https://www.ceranet.dz/assets/img/bidon-jaune-5l-900.webp",
+      "brand": { "@id": "https://www.ceranet.dz/#organisation" },
+      "hasMeasurement": [
+        { "@type": "QuantitativeValue", "name": "Contenance", "value": 5, "unitCode": "LTR" },
+        { "@type": "QuantitativeValue", "name": "Contenance", "value": 2, "unitCode": "LTR" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.ceranet.dz/#faq",
+      "inLanguage": "fr",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre DXS 6000 et DXS 6000N ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "DXS 6000 est la formule extérieure, pensée pour les terrasses, les allées et les margelles de piscine, où les dépôts viennent de la pluie, du calcaire et de la pollution. DXS 6000N est la formule professionnelle 3 en 1, utilisable à l'intérieur comme à l'extérieur, qui nettoie, protège et fait briller le carrelage de toute la maison." }
+        },
+        {
+          "@type": "Question",
+          "name": "CERANET abîme-t-il les joints du carrelage ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Non : la formule est conçue pour déloger les dépôts logés dans les joints sans les attaquer. Comme pour tout produit de nettoyage, faites un essai sur une petite zone peu visible avant de traiter une grande surface, en particulier sur un revêtement ancien ou poreux." }
+        },
+        {
+          "@type": "Question",
+          "name": "Sur quelles surfaces peut-on utiliser CERANET ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Carrelage, grès cérame, pierre, dalles de terrasse, allées et margelles de piscine, à l'intérieur comme à l'extérieur. Le produit n'est pas prévu pour le parquet, les surfaces textiles ni les métaux non protégés." }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il choisir le bidon de 5 L ou de 2 L ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le bidon de 5 litres est le format économique : il convient aux grandes surfaces, aux terrasses et à un usage régulier, notamment pour les professionnels du nettoyage. Le 2 litres est adapté à un usage ponctuel ou à un premier essai." }
+        },
+        {
+          "@type": "Question",
+          "name": "CERANET livre-t-il partout en Algérie ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, CERANET livre dans les 58 wilayas d'Algérie. La commande se fait par le formulaire du site ou par WhatsApp au +213 798 763 943." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment passer commande chez CERANET ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Deux possibilités : le formulaire de commande du site, ou WhatsApp au +213 798 763 943. Dans les deux cas, le prix, le délai de livraison et les modalités de paiement sont confirmés avant l'expédition." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
 </html>

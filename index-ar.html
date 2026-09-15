@@ -1,977 +1,768 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>سيرانيت — منظف السيراميك الخارجي والاحترافي | الجزائر</title>
-    <meta
-      name="description"
-      content="سيرانيت، خبير تنظيف السيراميك في الجزائر. منظف خارجي DXS 6000 ومنظف احترافي 3 في 1 DXS 6000N، متوفران بحجم 5 لتر و2 لتر. يحمي، ينظف، يلمّع."
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body class="bg-gray-50 text-gray-800 antialiased">
-    <!-- شريط التنقل -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div class="flex items-center justify-between h-16 sm:h-20">
-          <a href="#" class="flex items-center gap-3 shrink-0">
-            <img
-              src="assets/img/ceranet-logo.svg"
-              alt="سيرانيت"
-              class="h-9 sm:h-12 w-auto mix-blend-multiply"
-            />
-          </a>
-          <div
-            class="hidden md:flex items-center gap-10 font-utility text-sm font-medium text-gray-600"
-          >
-            <a
-              href="#avant-apres"
-              class="hover:text-[var(--ceranet-blue)] transition-colors"
-              >قبل / بعد</a
-            >
-            <a
-              href="#produits"
-              class="hover:text-[var(--ceranet-blue)] transition-colors"
-              >المنتجات</a
-            >
-            <a
-              href="#avantages"
-              class="hover:text-[var(--ceranet-blue)] transition-colors"
-              >المزايا</a
-            >
-            <a
-              href="#commande"
-              class="hover:text-[var(--ceranet-blue)] transition-colors"
-              >اتصل بنا</a
-            >
-          </div>
-          <div class="flex items-center gap-2 sm:gap-3">
-            <a
-              href="index-fr.html"
-              class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-full border border-gray-200 text-xs font-utility font-semibold text-gray-500 hover:border-[var(--ceranet-blue)] hover:text-[var(--ceranet-blue)] transition-colors"
-            >
-              Français
-            </a>
-            <a
-              href="#commande"
-              class="cta-btn text-white font-utility font-bold text-xs sm:text-sm px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full transition-colors whitespace-nowrap"
-            >
-              اطلب الآن
-            </a>
-            <button
-              id="menuBtn"
-              aria-label="فتح القائمة"
-              aria-expanded="false"
-              class="md:hidden flex items-center justify-center w-9 h-9 rounded-full border border-gray-200 text-[var(--ceranet-blue-deep)] shrink-0"
-            >
-              <svg
-                id="menuIconOpen"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <svg
-                id="menuIconClose"
-                class="w-5 h-5 hidden"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div
-          id="mobileMenu"
-          class="md:hidden hidden flex-col gap-1 pb-5 font-utility text-sm font-medium text-gray-600"
-        >
-          <a
-            href="#avant-apres"
-            class="px-2 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[var(--ceranet-blue)] transition-colors"
-            >قبل / بعد</a
-          >
-          <a
-            href="#produits"
-            class="px-2 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[var(--ceranet-blue)] transition-colors"
-            >المنتجات</a
-          >
-          <a
-            href="#avantages"
-            class="px-2 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[var(--ceranet-blue)] transition-colors"
-            >المزايا</a
-          >
-          <a
-            href="#commande"
-            class="px-2 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[var(--ceranet-blue)] transition-colors"
-            >اتصل بنا</a
-          >
-          <a
-            href="index-fr.html"
-            class="mt-2 px-2 py-2.5 rounded-lg border border-gray-200 text-center font-semibold text-gray-500"
-            >Français</a
-          >
-        </div>
-      </div>
-    </nav>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- البانر الرئيسي — تصميم متجاوب (سطح المكتب / موبايل) -->
-    <header>
-      <img
-        src="assets/img/baniere-desktop-ar.png"
-        alt="سيرانيت — خبير تنظيف السيراميك في الجزائر"
-        class="hero-desktop w-full h-auto"
-      />
-      <img
-        src="assets/img/baniere-mobile-ar.png"
-        alt="سيرانيت — خبير تنظيف السيراميك في الجزائر"
-        class="hero-mobile w-full h-auto"
-      />
-    </header>
+<!-- ============================================================
+     REMPLACER https://www.ceranet.dz PARTOUT PAR LE VRAI DOMAINE
+     ============================================================ -->
 
-    <!-- قبل / بعد -->
-    <section
-      id="avant-apres"
-      class="py-14 sm:py-20 lg:py-24 px-5 sm:px-6 lg:px-10 bg-white"
-    >
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-10 reveal-up">
-          <span
-            class="font-utility text-xs font-bold tracking-[0.25em] uppercase text-[var(--ceranet-sky)]"
-            >الدليل بالصورة</span
-          >
-          <h2
-            class="mt-3 text-3xl md:text-4xl font-black text-[var(--ceranet-blue-deep)]"
-          >
-            قبل / بعد
-          </h2>
-          <div
-            class="h-1 w-16 accent-underline rounded-full mx-auto mt-5"
-          ></div>
-          <p class="mt-5 text-gray-500 leading-relaxed">
-            اسحب المؤشر لاكتشاف قوة تنظيف سيرانيت على أرضية حقيقية.
-          </p>
-        </div>
+<title>سيرانيت — منظف السيراميك الاحترافي للداخل والخارج | الجزائر</title>
+<meta name="description" content="سيرانيت يذيب الكلس والطحالب والبقع الدهنية على سيراميك الداخل والخارج. تركيبتان احترافيتان، DXS 6000 وDXS 6000N، بعبوات 5 لتر و2 لتر. التوصيل إلى 58 ولاية.">
 
-        <div class="ba-wrap reveal-up" id="baSlider">
-          <div class="ba-layer ba-before">
-            <div class="ba-floor"></div>
-            <div class="ba-grime"></div>
-            <div class="ba-before-vignette"></div>
-          </div>
-          <div class="ba-clip" id="baClip">
-            <div class="ba-layer ba-after">
-              <div class="ba-floor"></div>
-            </div>
-          </div>
-          <span class="ba-tag ba-tag-before">قبل</span>
-          <span class="ba-tag ba-tag-after">بعد</span>
-          <div class="ba-handle" id="baHandle">
-            <div class="ba-grip">
-              <svg
-                class="w-6 h-6"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-blue-deep)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 6-6 6 6 6M15 6l6 6-6 6" />
-              </svg>
-            </div>
-          </div>
-        </div>
+<link rel="canonical" href="https://www.ceranet.dz/index-ar.html">
+<link rel="alternate" hreflang="ar" href="https://www.ceranet.dz/index-ar.html">
+<link rel="alternate" hreflang="fr" href="https://www.ceranet.dz/">
+<link rel="alternate" hreflang="x-default" href="https://www.ceranet.dz/">
 
-        <p
-          class="mt-8 text-center text-gray-500 leading-relaxed max-w-2xl mx-auto"
-        >
-          كلس متراكم، طحالب، بقايا دهنية، آثار تلوث: تركيبة سيرانيت المركزة
-          تتغلغل في مسام السيراميك لإذابة أعند الرواسب. النتيجة: أرضية تستعيد
-          بريقها الأصلي، دون شطف صعب ودون ترك أي أثر.
-        </p>
-      </div>
-    </section>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CERANET">
+<meta property="og:locale" content="ar_DZ">
+<meta property="og:locale:alternate" content="fr_DZ">
+<meta property="og:url" content="https://www.ceranet.dz/index-ar.html">
+<meta property="og:title" content="سيرانيت — منظف السيراميك الاحترافي للداخل والخارج">
+<meta property="og:description" content="يذيب الكلس والطحالب والبقع الدهنية على السيراميك. تركيبتان، بعبوات 5 لتر و2 لتر. التوصيل إلى 58 ولاية.">
+<meta property="og:image" content="https://www.ceranet.dz/assets/img/og-ar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="عبوتا سيرانيت سعة 5 لتر أمام فناء مبلّط بالسيراميك.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A2846">
 
-    <!-- المنتجات -->
-    <section
-      id="produits"
-      class="py-14 sm:py-20 lg:py-24 px-5 sm:px-6 lg:px-10 bg-gray-50 tile-pattern"
-    >
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
-          <span
-            class="font-utility text-xs font-bold tracking-[0.25em] uppercase text-[var(--ceranet-red)]"
-            >تشكيلتنا</span
-          >
-          <h2
-            class="mt-3 text-3xl md:text-4xl font-black text-[var(--ceranet-blue-deep)]"
-          >
-            منتجاتنا
-          </h2>
-          <div
-            class="h-1 w-16 accent-underline rounded-full mx-auto mt-5"
-          ></div>
-          <p class="mt-5 text-gray-500 leading-relaxed">
-            تركيبتان احترافيتان لتنظيف السيراميك، مصممتان لكل سطح — اختر الحجم
-            المناسب أدناه.
-          </p>
-        </div>
+<link rel="icon" href="assets/img/ceranet-logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <!-- بطاقة الخارجي -->
-          <div class="pc-card pc-card--dark reveal-up" data-product="ext">
-            <div class="pc-blob"></div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400..800&display=swap">
 
-            <div class="pc-top">
-              <span class="pc-eyebrow">خارجي</span>
-              <div class="pc-toggle">
-                <span class="pc-toggle-thumb"></span>
-                <button
-                  type="button"
-                  class="pc-toggle-btn is-active"
-                  data-format="5l"
-                >
-                  5 لتر
-                </button>
-                <button type="button" class="pc-toggle-btn" data-format="2l">
-                  2 لتر
-                </button>
-              </div>
-            </div>
+<link rel="stylesheet" href="assets/css/style.css">
 
-            <div class="pc-imgbox">
-              <img
-                src="assets/img/bidon-bleu.png"
-                alt="سيرانيت الخارجي DXS 6000 — عبوة 5 لتر"
-                class="pc-img"
-                data-fmt="5l"
-                style="opacity: 1"
-              />
-              <img
-                src="assets/img/b2-2l.png"
-                alt="سيرانيت الخارجي DXS 6000 — حجم 2 لتر"
-                class="pc-img"
-                data-fmt="2l"
-                style="opacity: 0; transform: scale(0.92)"
-              />
-            </div>
+<link rel="preload" as="image" type="image/avif"
+      href="assets/img/baniere-ar-desktop-1280.avif"
+      imagesrcset="assets/img/baniere-ar-mobile-640.avif 640w, assets/img/baniere-ar-mobile-864.avif 864w"
+      imagesizes="100vw" media="(max-width:767px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif"
+      href="assets/img/baniere-ar-desktop-1280.avif"
+      imagesrcset="assets/img/baniere-ar-desktop-960.avif 960w, assets/img/baniere-ar-desktop-1280.avif 1280w, assets/img/baniere-ar-desktop-1440.avif 1440w, assets/img/baniere-ar-desktop-1774.avif 1774w"
+      imagesizes="100vw" media="(min-width:768px)" fetchpriority="high">
 
-            <h3 class="pc-title text-2xl md:text-3xl">
-              سيرانيت الخارجي<br />DXS 6000
-            </h3>
-            <p class="pc-desc">
-              منظف السيراميك الخارجي الذي يعيد لتراساتكم وممراتكم ومحيط مسبحكم
-              بريقها الأصلي. تركيبة مركزة تذيب الكلس والطحالب والرواسب العنيدة،
-              دون الإضرار بالسيراميك أو الفواصل.
-            </p>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/form.js" defer></script>
+</head>
 
-            <span
-              class="pc-contenance"
-              data-contenance
-              data-5l="السعة 5 لتر · J5L"
-              data-2l="السعة 2 لتر · J2L"
-              >السعة 5 لتر · J5L</span
-            >
+<body>
+<a class="skip-link" href="#main">انتقل إلى المحتوى</a>
 
-            <a
-              href="https://wa.me/213560001183?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%AA%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%20DXS%206000"
-              target="_blank"
-              class="pc-cta"
-              data-cta
-              data-wa-base="https://wa.me/213560001183?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%AA%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%AC%D9%8A%20DXS%206000"
-              data-label-5l="اطلب 5 لتر"
-              data-label-2l="اطلب 2 لتر"
-            >
-              <span data-cta-text>اطلب 5 لتر</span>
-              <svg
-                class="w-4 h-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M19 12H5M11 6l-6 6 6 6" />
-              </svg>
-            </a>
-          </div>
+<!-- ===================== التنقل ===================== -->
+<header class="nav">
+  <div class="shell">
+    <div class="nav-row">
+      <a class="nav-logo" href="index-ar.html" aria-label="سيرانيت، الصفحة الرئيسية">
+        <img src="assets/img/ceranet-logo.svg" alt="سيرانيت" width="160" height="42">
+      </a>
 
-          <!-- بطاقة الاحترافي -->
-          <div class="pc-card pc-card--light reveal-up" data-product="pro">
-            <div class="pc-blob"></div>
+      <nav class="nav-links" aria-label="التنقل الرئيسي">
+        <a href="#demonstration">قبل وبعد</a>
+        <a href="#gamme">المنتجات</a>
+        <a href="#surfaces">الأسطح</a>
+        <a href="#utilisation">طريقة الاستعمال</a>
+        <a href="#questions">أسئلة شائعة</a>
+      </nav>
 
-            <div class="pc-top">
-              <span class="pc-eyebrow">داخلي · خارجي</span>
-              <div class="pc-toggle">
-                <span class="pc-toggle-thumb"></span>
-                <button
-                  type="button"
-                  class="pc-toggle-btn is-active"
-                  data-format="5l"
-                >
-                  5 لتر
-                </button>
-                <button type="button" class="pc-toggle-btn" data-format="2l">
-                  2 لتر
-                </button>
-              </div>
-            </div>
-
-            <div class="pc-imgbox">
-              <img
-                src="assets/img/bidon-jaune.png"
-                alt="سيرانيت الاحترافي DXS 6000N — عبوة 5 لتر"
-                class="pc-img"
-                data-fmt="5l"
-                style="opacity: 1"
-              />
-              <img
-                src="assets/img/b1-2l.png"
-                alt="سيرانيت الاحترافي DXS 6000N — حجم 2 لتر"
-                class="pc-img"
-                data-fmt="2l"
-                style="opacity: 0; transform: scale(0.92)"
-              />
-            </div>
-
-            <h3 class="pc-title text-2xl md:text-3xl">
-              سيرانيت الاحترافي<br />DXS 6000N
-            </h3>
-            <p class="pc-desc">
-              يحمي، ينظف، يلمّع: الحل متعدد الاستخدامات 3 في 1 لجميع الأسطح
-              السيراميكية في المنزل. تركيبته المرنة تعيد البريق واللمعان
-              للسيراميك والحجر، دون ترك طبقة دهنية أو آثار.
-            </p>
-
-            <div class="pc-pills">
-              <span
-                class="pc-pill bg-[var(--ceranet-blue)]/10 text-[var(--ceranet-blue)]"
-                >يحمي</span
-              >
-              <span
-                class="pc-pill bg-[var(--ceranet-green)]/10 text-[var(--ceranet-green)]"
-                >ينظف</span
-              >
-              <span
-                class="pc-pill bg-[var(--ceranet-red)]/10 text-[var(--ceranet-red)]"
-                >يلمّع</span
-              >
-            </div>
-
-            <span
-              class="pc-contenance"
-              data-contenance
-              data-5l="السعة 5 لتر · J5L"
-              data-2l="السعة 2 لتر · J2L"
-              >السعة 5 لتر · J5L</span
-            >
-
-            <a
-              href="https://wa.me/213560001183?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%AA%20%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%20DXS%206000N"
-              target="_blank"
-              class="pc-cta"
-              data-cta
-              data-wa-base="https://wa.me/213560001183?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%AA%20%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%20DXS%206000N"
-              data-label-5l="اطلب 5 لتر"
-              data-label-2l="اطلب 2 لتر"
-            >
-              <span data-cta-text>اطلب 5 لتر</span>
-              <svg
-                class="w-4 h-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M19 12H5M11 6l-6 6 6 6" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- المزايا -->
-    <section
-      id="avantages"
-      class="py-14 sm:py-20 lg:py-24 px-5 sm:px-6 lg:px-10 bg-white"
-    >
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
-          <span
-            class="font-utility text-xs font-bold tracking-[0.25em] uppercase text-[var(--ceranet-green)]"
-            >لماذا سيرانيت</span
-          >
-          <h2
-            class="mt-3 text-3xl md:text-4xl font-black text-[var(--ceranet-blue-deep)]"
-          >
-            مزايانا
-          </h2>
-          <div
-            class="h-1 w-16 accent-underline rounded-full mx-auto mt-5"
-          ></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
-          >
-            <div
-              class="w-16 h-16 mx-auto rounded-2xl bg-[var(--ceranet-blue)]/10 flex items-center justify-center"
-            >
-              <svg
-                class="w-8 h-8"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-blue)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M6 3h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"
-                />
-                <path d="M9 3v6h6" />
-                <path d="M9 15h6M9 18h4" />
-              </svg>
-            </div>
-            <h3 class="mt-6 font-black text-lg text-[var(--ceranet-blue-deep)]">
-              حجم اقتصادي 5 لتر
-            </h3>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              عبوة كبيرة مصممة لتدوم طويلاً، دون أي تنازل عن قوة التنظيف. متوفرة
-              أيضاً بـ 2 لتر للاستخدام العرضي.
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
-          >
-            <div
-              class="w-16 h-16 mx-auto rounded-2xl bg-[var(--ceranet-green)]/10 flex items-center justify-center"
-            >
-              <svg
-                class="w-8 h-8"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-green)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" />
-              </svg>
-            </div>
-            <h3 class="mt-6 font-black text-lg text-[var(--ceranet-blue-deep)]">
-              فعالية فورية
-            </h3>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              نتيجة مرئية من أول استخدام، دون الحاجة لفرك شاق.
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
-          >
-            <div
-              class="w-16 h-16 mx-auto rounded-2xl bg-[var(--ceranet-red)]/10 flex items-center justify-center"
-            >
-              <svg
-                class="w-8 h-8"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-red)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M12 2 4.5 5v6c0 5 3.2 8.7 7.5 10 4.3-1.3 7.5-5 7.5-10V5L12 2z"
-                />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </div>
-            <h3 class="mt-6 font-black text-lg text-[var(--ceranet-blue-deep)]">
-              جودة احترافية
-            </h3>
-            <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              تركيبة مثبتة الفعالية، مصممة لتلبية متطلبات محترفي التنظيف.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- اتصل بنا / اطلب -->
-    <section
-      id="commande"
-      class="py-14 sm:py-20 lg:py-24 px-5 sm:px-6 lg:px-10 bg-gray-50 tile-pattern"
-    >
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-10 reveal-up">
-          <span
-            class="font-utility text-xs font-bold tracking-[0.25em] uppercase text-[var(--ceranet-red)]"
-            >أتمم طلبك</span
-          >
-          <h2
-            class="mt-3 text-3xl md:text-4xl font-black text-[var(--ceranet-blue-deep)]"
-          >
-            اتصل بنا واطلب
-          </h2>
-          <div
-            class="h-1 w-16 accent-underline rounded-full mx-auto mt-5"
-          ></div>
-          <p class="mt-5 text-gray-500 leading-relaxed">
-            املأ الاستمارة، أو تواصل معنا مباشرة — نرد عليك بسرعة.
-          </p>
-        </div>
-
-        <!-- التواصل المباشر -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-          <a
-            href="https://wa.me/213560001183"
-            target="_blank"
-            class="contact-chip bg-white rounded-2xl p-5 border border-gray-100 flex items-center gap-4"
-          >
-            <div
-              class="w-11 h-11 rounded-full bg-[#1FAA55]/10 flex items-center justify-center shrink-0"
-            >
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#1FAA55">
-                <path
-                  d="M17.5 14.4c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5.1-.1.3-.3.4-.5.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"
-                />
-                <path
-                  d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2z"
-                />
-              </svg>
-            </div>
-            <div class="text-start">
-              <span
-                class="font-utility text-xs font-bold uppercase tracking-wide text-gray-400"
-                >واتساب</span
-              >
-              <p
-                class="font-utility font-bold text-[var(--ceranet-blue-deep)] text-sm"
-                dir="ltr"
-              >
-                +213 560 001 183
-              </p>
-            </div>
-          </a>
-          <a
-            href="tel:+213560001185"
-            class="contact-chip bg-white rounded-2xl p-5 border border-gray-100 flex items-center gap-4"
-          >
-            <div
-              class="w-11 h-11 rounded-full bg-[var(--ceranet-blue)]/10 flex items-center justify-center shrink-0"
-            >
-              <svg
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-blue)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
-                />
-              </svg>
-            </div>
-            <div class="text-start">
-              <span
-                class="font-utility text-xs font-bold uppercase tracking-wide text-gray-400"
-                >هاتف</span
-              >
-              <p
-                class="font-utility font-bold text-[var(--ceranet-blue-deep)] text-sm"
-                dir="ltr"
-              >
-                +213 560 001 185
-              </p>
-            </div>
-          </a>
-          <a
-            href="mailto:ramissaceram@gmail.com"
-            class="contact-chip bg-white rounded-2xl p-5 border border-gray-100 flex items-center gap-4"
-          >
-            <div
-              class="w-11 h-11 rounded-full bg-[var(--ceranet-red)]/10 flex items-center justify-center shrink-0"
-            >
-              <svg
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--ceranet-red)"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 4h16v16H4z" stroke="none" />
-                <path d="M22 6 12 13 2 6" />
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-              </svg>
-            </div>
-            <div class="min-w-0 text-start">
-              <span
-                class="font-utility text-xs font-bold uppercase tracking-wide text-gray-400"
-                >البريد الإلكتروني</span
-              >
-              <p
-                class="font-utility font-bold text-[var(--ceranet-blue-deep)] text-sm truncate"
-              >
-                ramissaceram@gmail.com
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <form
-          id="contactForm"
-          data-redirect="index-ar.html"
-          class="bg-white rounded-3xl p-6 sm:p-8 md:p-12 border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 shadow-sm"
-        >
-          <!-- حقول Web3Forms المخفية: استبدل YOUR_WEB3FORMS_ACCESS_KEY بمفتاحك (مجاني عبر web3forms.com) -->
-          <input
-            type="hidden"
-            name="access_key"
-            value="c2110998-9992-433b-8ac2-0254442b4442"
-          />
-          <input
-            type="hidden"
-            name="subject"
-            value="طلب جديد — موقع سيرانيت (AR)"
-          />
-          <input type="hidden" name="from_name" value="موقع سيرانيت" />
-
-          <!-- حقل فخي (Honeypot) لمكافحة الروبوتات: مخفي، لا يملؤه إنسان أبداً.
-               الاسم "botcheck" يُعرَّف تلقائياً من طرف Web3Forms أيضاً. -->
-          <div class="hp-field" aria-hidden="true">
-            <label for="website">لا تملأ هذا الحقل</label>
-            <input
-              type="text"
-              id="website"
-              name="botcheck"
-              tabindex="-1"
-              autocomplete="off"
-            />
-          </div>
-          <div class="flex flex-col gap-2" data-field>
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccName"
-              >الاسم الكامل</label
-            >
-            <input
-              type="text"
-              id="ccName"
-              name="name"
-              placeholder="اسمك الكامل"
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow text-start"
-              data-required
-              required
-            />
-            <p class="field-error" data-error-for="ccName" hidden>
-              الرجاء إدخال اسمك الكامل.
-            </p>
-          </div>
-          <div class="flex flex-col gap-2" data-field>
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccPhone"
-              >رقم الهاتف</label
-            >
-            <input
-              type="tel"
-              id="ccPhone"
-              name="phone"
-              placeholder="06 XX XX XX XX"
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow text-start"
-              dir="ltr"
-              data-required
-              required
-            />
-            <p class="field-error" data-error-for="ccPhone" hidden>
-              الرجاء إدخال رقم هاتفك.
-            </p>
-          </div>
-          <div class="md:col-span-2 flex flex-col gap-2" data-field>
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccWilaya"
-              >الولاية</label
-            >
-            <select
-              id="ccWilaya"
-              name="wilaya"
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow text-gray-600 text-start"
-              data-required
-              required
-            >
-              <option value="">اختر ولايتك</option>
-              <option value="01">01 - أدرار</option>
-              <option value="02">02 - الشلف</option>
-              <option value="03">03 - الأغواط</option>
-              <option value="04">04 - أم البواقي</option>
-              <option value="05">05 - باتنة</option>
-              <option value="06">06 - بجاية</option>
-              <option value="07">07 - بسكرة</option>
-              <option value="08">08 - بشار</option>
-              <option value="09">09 - البليدة</option>
-              <option value="10">10 - البويرة</option>
-              <option value="11">11 - تمنراست</option>
-              <option value="12">12 - تبسة</option>
-              <option value="13">13 - تلمسان</option>
-              <option value="14">14 - تيارت</option>
-              <option value="15">15 - تيزي وزو</option>
-              <option value="16">16 - الجزائر</option>
-              <option value="17">17 - الجلفة</option>
-              <option value="18">18 - جيجل</option>
-              <option value="19">19 - سطيف</option>
-              <option value="20">20 - سعيدة</option>
-              <option value="21">21 - سكيكدة</option>
-              <option value="22">22 - سيدي بلعباس</option>
-              <option value="23">23 - عنابة</option>
-              <option value="24">24 - قالمة</option>
-              <option value="25">25 - قسنطينة</option>
-              <option value="26">26 - المدية</option>
-              <option value="27">27 - مستغانم</option>
-              <option value="28">28 - المسيلة</option>
-              <option value="29">29 - معسكر</option>
-              <option value="30">30 - ورقلة</option>
-              <option value="31">31 - وهران</option>
-              <option value="32">32 - البيض</option>
-              <option value="33">33 - إليزي</option>
-              <option value="34">34 - برج بوعريريج</option>
-              <option value="35">35 - بومرداس</option>
-              <option value="36">36 - الطارف</option>
-              <option value="37">37 - تندوف</option>
-              <option value="38">38 - تيسمسيلت</option>
-              <option value="39">39 - الوادي</option>
-              <option value="40">40 - خنشلة</option>
-              <option value="41">41 - سوق أهراس</option>
-              <option value="42">42 - تيبازة</option>
-              <option value="43">43 - ميلة</option>
-              <option value="44">44 - عين الدفلى</option>
-              <option value="45">45 - النعامة</option>
-              <option value="46">46 - عين تموشنت</option>
-              <option value="47">47 - غرداية</option>
-              <option value="48">48 - غليزان</option>
-              <option value="49">49 - تيميمون</option>
-              <option value="50">50 - برج باجي مختار</option>
-              <option value="51">51 - أولاد جلال</option>
-              <option value="52">52 - بني عباس</option>
-              <option value="53">53 - عين صالح</option>
-              <option value="54">54 - عين قزام</option>
-              <option value="55">55 - تقرت</option>
-              <option value="56">56 - جانت</option>
-              <option value="57">57 - المغير</option>
-              <option value="58">58 - المنيعة</option>
-            </select>
-          </div>
-          <div class="md:col-span-2 flex flex-col gap-2" data-field>
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccAddress"
-              >عنوان التوصيل</label
-            >
-            <input
-              type="text"
-              id="ccAddress"
-              name="address"
-              placeholder="الشارع، الحي، المدينة"
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow text-start"
-              data-required
-              required
-            />
-            <p class="field-error" data-error-for="ccAddress" hidden>
-              الرجاء إدخال عنوان التوصيل.
-            </p>
-          </div>
-          <div class="md:col-span-2 flex flex-col gap-2">
-            <label
-              class="font-utility text-sm font-semibold text-gray-600"
-              for="ccMessage"
-              >رسالة
-              <span class="text-gray-400 font-normal">(إجباري)</span></label
-            >
-            <textarea
-              required
-              id="ccMessage"
-              name="message"
-              rows="4"
-              placeholder="اذكر احتياجك، الكمية المطلوبة (5 لتر أو 2 لتر)، أو أي سؤال آخر..."
-              class="rounded-xl border border-gray-200 px-4 py-3 bg-gray-50 transition-shadow resize-none text-start"
-            ></textarea>
-          </div>
-
-          <!-- تحدٍّ بسيط 100% JS ضد الروبوتات: عملية حسابية عشوائية يتم التحقق منها فعلياً
-               قبل الإرسال (وليس مجرد مربع اختيار). -->
-          <div class="md:col-span-2 flex flex-col gap-2" data-field>
-            <label class="font-utility text-sm font-semibold text-gray-600"
-              >التحقق من عدم كونك روبوتاً</label
-            >
-            <div id="captchaBox" class="captcha-check">
-              <div class="captcha-icon-wrap">
-                <svg
-                  class="w-5 h-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--ceranet-blue)"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M12 2 4.5 5v6c0 5 3.2 8.7 7.5 10 4.3-1.3 7.5-5 7.5-10V5L12 2z"
-                  />
-                </svg>
-              </div>
-              <div class="captcha-question text-start">
-                <p class="captcha-label">
-                  كم يساوي
-                  <span id="captchaA">3</span> + <span id="captchaB">5</span> ؟
-                </p>
-                <p class="captcha-sub">أثبت أنك لست روبوتاً</p>
-              </div>
-              <input
-                type="number"
-                inputmode="numeric"
-                id="captchaAnswer"
-                name="captcha_answer"
-                class="captcha-input"
-                placeholder="؟"
-                autocomplete="off"
-                dir="ltr"
-              />
-              <button
-                type="button"
-                id="captchaRefresh"
-                class="captcha-refresh"
-                aria-label="عملية حسابية جديدة"
-                title="عملية حسابية جديدة"
-              >
-                <svg
-                  class="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--ceranet-blue-deep)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M21 12a9 9 0 1 1-3-6.7M21 3v6h-6" />
-                </svg>
-              </button>
-            </div>
-            <p class="field-error" data-error-for="captchaAnswer" hidden>
-              إجابة غير صحيحة، حاول مجدداً.
-            </p>
-          </div>
-
-          <p
-            data-form-error
-            hidden
-            class="md:col-span-2 text-sm font-utility font-semibold text-[var(--ceranet-red)] bg-[var(--ceranet-red)]/10 rounded-xl px-4 py-3"
-          >
-            حدث خطأ أثناء الإرسال. حاول مجدداً أو تواصل معنا مباشرة عبر واتساب
-            أدناه.
-          </p>
-
-          <div class="md:col-span-2 flex flex-col sm:flex-row gap-4 mt-4">
-            <button
-              type="submit"
-              data-sending-label="جاري الإرسال..."
-              class="cta-btn flex-1 text-white font-utility font-bold py-4 rounded-full transition-colors"
-            >
-              تأكيد الطلب
-            </button>
-            <a
-              href="https://wa.me/213560001183"
-              target="_blank"
-              class="wa-btn flex-1 flex items-center justify-center gap-2 text-white font-utility font-bold py-4 rounded-full transition-colors"
-            >
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.5 14.4c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5.1-.1.3-.3.4-.5.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"
-                />
-                <path
-                  d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2z"
-                />
-              </svg>
-              اطلب عبر واتساب
-            </a>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- التذييل -->
-    <footer class="bg-[var(--ceranet-blue-deep)] py-12 px-5 sm:px-6 lg:px-10">
-      <div
-        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6"
-      >
-        <div class="bg-white/95 rounded-full px-4 py-2">
-          <img
-            src="assets/img/ceranet-logo.svg"
-            alt="سيرانيت"
-            class="h-7 w-auto mix-blend-multiply"
-          />
-        </div>
-        <p
-          class="font-utility text-xs text-blue-200/70 text-center md:text-start"
-        >
-          © 2026 سيرانيت بروبري — جميع الحقوق محفوظة.
-        </p>
-      </div>
-    </footer>
-
-    <!-- طبقة تأكيد الإرسال -->
-    <div id="successOverlay" class="success-overlay">
-      <div class="max-w-sm">
-        <div class="success-check" data-success-anim>
-          <svg viewBox="0 0 52 52">
-            <circle cx="26" cy="26" r="23"></circle>
-            <path d="M15 27 L23 35 L38 18"></path>
-          </svg>
-        </div>
-        <h3 class="text-white text-2xl font-black" data-success-anim>
-          تم إرسال رسالتك بنجاح!
-        </h3>
-        <p class="text-blue-100 mt-3 leading-relaxed" data-success-anim>
-          شكراً لتواصلكم معنا. سيقوم فريق سيرانيت بالرد عليكم في أقرب وقت.
-        </p>
-        <p class="text-blue-200/70 text-sm mt-6 font-utility" data-success-anim>
-          إعادة التوجيه خلال <span data-countdown>4</span> ثوانٍ…
-        </p>
+      <div class="nav-actions">
+        <a class="lang-switch" href="/" hreflang="fr" lang="fr">Français</a>
+        <a class="btn btn-primary btn-sm nav-desktop-cta" href="#commande">اطلب الآن</a>
+        <button class="burger" id="burger" type="button"
+                aria-expanded="false" aria-controls="navMobile" aria-label="فتح القائمة">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/animations.js"></script>
-    <script src="assets/js/form.js"></script>
-  </body>
+    <nav class="nav-mobile" id="navMobile" aria-label="قائمة الهاتف">
+      <a href="#demonstration">قبل وبعد</a>
+      <a href="#gamme">المنتجات</a>
+      <a href="#surfaces">الأسطح</a>
+      <a href="#utilisation">طريقة الاستعمال</a>
+      <a href="#questions">أسئلة شائعة</a>
+      <a href="#commande">اطلب الآن</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== الواجهة ===================== -->
+<section class="hero">
+      <div class="hero-banner">
+        <picture>
+          <source media="(max-width:767px)" type="image/avif"
+                  srcset="assets/img/baniere-ar-mobile-640.avif 640w, assets/img/baniere-ar-mobile-864.avif 864w"
+                  sizes="100vw">
+          <source media="(max-width:767px)" type="image/webp"
+                  srcset="assets/img/baniere-ar-mobile-640.webp 640w, assets/img/baniere-ar-mobile-864.webp 864w"
+                  sizes="100vw">
+          <source type="image/avif"
+                  srcset="assets/img/baniere-ar-desktop-960.avif 960w, assets/img/baniere-ar-desktop-1280.avif 1280w, assets/img/baniere-ar-desktop-1440.avif 1440w, assets/img/baniere-ar-desktop-1774.avif 1774w"
+                  sizes="100vw">
+          <source type="image/webp"
+                  srcset="assets/img/baniere-ar-desktop-960.webp 960w, assets/img/baniere-ar-desktop-1280.webp 1280w, assets/img/baniere-ar-desktop-1440.webp 1440w, assets/img/baniere-ar-desktop-1774.webp 1774w"
+                  sizes="100vw">
+          <img src="assets/img/baniere-ar-desktop-960.jpg" width="1774" height="887"
+               fetchpriority="high" decoding="async" alt="سيرانيت، الخيار الأول في تنظيف السيراميك: لمعان مبهر، حماية طويلة الأمد، تركيبة قوية، للداخل والخارج.">
+        </picture>
+      </div>
+
+      <div class="shell">
+        <div class="hero-intro">
+          <div class="grout-rule"></div>
+          <h1>المنظف الذي يعيد لمعان السيراميك</h1>
+          <p class="lead">
+            سيرانيت يذيب الكلس والطحالب والبقع الدهنية على سيراميك الداخل والخارج.
+            تركيبتان احترافيتان، بعبوات 5 لتر و2 لتر، مع التوصيل إلى 58 ولاية عبر الجزائر.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/213798763943?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%AA"
+               target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2zm5.5-5.8c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg>
+              اطلب عبر واتساب
+            </a>
+            <a class="btn btn-outline" href="#gamme">اكتشف التركيبتين</a>
+          </div>
+
+          <dl class="hero-spec">
+            <div><dt>المنتجات</dt><dd>تركيبتان</dd></div>
+            <div><dt>السعة</dt><dd>5 لتر و2 لتر</dd></div>
+            <div><dt>الأسطح</dt><dd>داخلي وخارجي</dd></div>
+            <div><dt>التوصيل</dt><dd>58 ولاية</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== قبل وبعد ===================== -->
+<section class="demo tile-pattern" id="demonstration">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>الفرق على بلاط متسخ</h2>
+      <p class="lead">
+        حرّك المؤشر لمقارنة أرضية مغطاة بالرواسب مع الأرضية نفسها بعد التنظيف.
+        الكلس والبقع الدهنية تزول دون فرك طويل.
+      </p>
+    </div>
+
+    <!-- À FAIRE : remplacer par de vraies photos avant / après. -->
+    <div class="ba reveal" id="ba" style="--pos:50%">
+      <div class="ba-layer ba-before">
+        <div class="ba-floor" aria-hidden="true"></div>
+        <div class="ba-grime" aria-hidden="true"></div>
+      </div>
+      <div class="ba-clip">
+        <div class="ba-layer ba-after">
+          <div class="ba-floor" aria-hidden="true"></div>
+        </div>
+      </div>
+      <span class="ba-tag ba-tag-before">قبل</span>
+      <span class="ba-tag ba-tag-after">بعد</span>
+      <button class="ba-handle" id="baHandle" type="button"
+              role="slider" tabindex="0"
+              aria-label="قارن بين قبل وبعد"
+              aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <span class="ba-grip" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0A2846" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg>
+        </span>
+      </button>
+    </div>
+
+    <p class="demo-note">
+      محاكاة تفاعلية للفرق بين ما قبل التنظيف وما بعده. النتيجة الفعلية تختلف
+      حسب نوع السيراميك ومساميته وقِدَم الرواسب.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== المنتجات ===================== -->
+<section id="gamme">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>تركيبتان، واحدة لكل سطح</h2>
+      <p class="lead">
+        التركيبة الخارجية تعالج رواسب الماء والتلوث على الفناءات والممرات.
+        والتركيبة الاحترافية تنظف وتحمي وتلمّع في كل أرجاء المنزل.
+        كلتاهما متوفرة بسعة 5 لتر و2 لتر.
+      </p>
+    </div>
+
+    <div class="range-grid">
+
+      <!-- ---------- DXS 6000 ---------- -->
+      <article class="product product--ext reveal" data-product="ext">
+        <div class="product-head">
+          <span class="product-ref">للخارج</span>
+          <div class="sizes" role="group" aria-label="اختر السعة">
+            <button type="button" data-for="5l" aria-pressed="true">5 لتر</button>
+            <button type="button" data-for="2l" aria-pressed="false">2 لتر</button>
+          </div>
+        </div>
+
+        <div class="product-shot">
+          <picture data-size="5l" class="is-shown">
+            <source type="image/avif" srcset="assets/img/bidon-bleu-5l-520.avif">
+            <source type="image/webp" srcset="assets/img/bidon-bleu-5l-520.webp">
+            <img src="assets/img/bidon-bleu-5l-520.png" width="592" height="900"
+                 loading="lazy" decoding="async"
+                 alt="سيرانيت للخارج DXS 6000، عبوة 5 لتر.">
+          </picture>
+          <picture data-size="2l">
+            <source type="image/avif" srcset="assets/img/bidon-bleu-2l-520.avif">
+            <source type="image/webp" srcset="assets/img/bidon-bleu-2l-520.webp">
+            <img src="assets/img/bidon-bleu-2l-520.png" width="573" height="900"
+                 loading="lazy" decoding="async"
+                 alt="سيرانيت للخارج DXS 6000، عبوة 2 لتر.">
+          </picture>
+        </div>
+
+        <h3>سيرانيت للخارج DXS 6000</h3>
+        <p class="product-desc">
+          للفناءات والممرات وحواف المسابح. تركيبة مركّزة تذيب الكلس والطحالب
+          والرواسب العنيدة التي يخلّفها المطر والتلوث، دون الإضرار بالسيراميك
+          أو بالفواصل بين البلاط.
+        </p>
+
+        <ul class="product-facts">
+          <li><span>المرجع</span><span>DXS 6000</span></li>
+          <li><span>الاستعمال</span><span>خارجي</span></li>
+          <li><span>السعة</span><span data-volume data-5l="5 لتر" data-2l="2 لتر">5 لتر</span></li>
+        </ul>
+
+        <a class="btn btn-primary" data-cta
+           data-wa="https://wa.me/213798763943?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%AA%20DXS%206000"
+           data-5l="اطلب عبوة 5 لتر" data-2l="اطلب عبوة 2 لتر"
+           href="https://wa.me/213798763943?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%AA%20DXS%206000%20(5L)"
+           target="_blank" rel="noopener">
+          <span data-cta-text>اطلب عبوة 5 لتر</span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <!-- ---------- DXS 6000N ---------- -->
+      <article class="product product--pro reveal" data-product="pro">
+        <div class="product-head">
+          <span class="product-ref">للداخل والخارج</span>
+          <div class="sizes" role="group" aria-label="اختر السعة">
+            <button type="button" data-for="5l" aria-pressed="true">5 لتر</button>
+            <button type="button" data-for="2l" aria-pressed="false">2 لتر</button>
+          </div>
+        </div>
+
+        <div class="product-shot">
+          <picture data-size="5l" class="is-shown">
+            <source type="image/avif" srcset="assets/img/bidon-jaune-5l-520.avif">
+            <source type="image/webp" srcset="assets/img/bidon-jaune-5l-520.webp">
+            <img src="assets/img/bidon-jaune-5l-520.png" width="596" height="900"
+                 loading="lazy" decoding="async"
+                 alt="سيرانيت الاحترافي DXS 6000N، عبوة 5 لتر.">
+          </picture>
+          <picture data-size="2l">
+            <source type="image/avif" srcset="assets/img/bidon-jaune-2l-520.avif">
+            <source type="image/webp" srcset="assets/img/bidon-jaune-2l-520.webp">
+            <img src="assets/img/bidon-jaune-2l-520.png" width="574" height="900"
+                 loading="lazy" decoding="async"
+                 alt="سيرانيت الاحترافي DXS 6000N، عبوة 2 لتر.">
+          </picture>
+        </div>
+
+        <h3>سيرانيت الاحترافي DXS 6000N</h3>
+        <p class="product-desc">
+          يحمي، ينظف، يلمّع: حلّ 3 في 1 لجميع أسطح السيراميك في المنزل.
+          يعيد البريق إلى البلاط والغرانيت السيراميكي والحجر، دون طبقة دهنية
+          ودون آثار.
+        </p>
+
+        <ul class="product-facts">
+          <li><span>المرجع</span><span>DXS 6000N</span></li>
+          <li><span>الاستعمال</span><span>داخلي وخارجي</span></li>
+          <li><span>الفعالية</span><span>يحمي، ينظف، يلمّع</span></li>
+          <li><span>السعة</span><span data-volume data-5l="5 لتر" data-2l="2 لتر">5 لتر</span></li>
+        </ul>
+
+        <a class="btn btn-ink" data-cta
+           data-wa="https://wa.me/213798763943?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%AA%20DXS%206000N"
+           data-5l="اطلب عبوة 5 لتر" data-2l="اطلب عبوة 2 لتر"
+           href="https://wa.me/213798763943?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B3%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%AA%20DXS%206000N%20(5L)"
+           target="_blank" rel="noopener">
+          <span data-cta-text>اطلب عبوة 5 لتر</span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== الأسطح ===================== -->
+<section class="spec" id="surfaces">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>على أي أسطح يُستعمل</h2>
+      <p class="lead">
+        سيرانيت مخصص لأسطح السيراميك والأسطح المعدنية الطبيعية، داخل المنزل وخارجه.
+        عند الشك في نوع السطح، جرّبه أولًا على مساحة صغيرة غير ظاهرة.
+      </p>
+    </div>
+
+    <div class="spec-grid reveal">
+      <div>
+        <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"/></svg>
+        <h3>البلاط والغرانيت السيراميكي</h3>
+        <p>أرضيات وجدران المطابخ والحمامات والممرات وغرف المعيشة.</p>
+      </div>
+      <div>
+        <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/></svg>
+        <h3>الفناءات والممرات</h3>
+        <p>بلاط خارجي اسودّ بفعل المطر والغبار والتلوث.</p>
+      </div>
+      <div>
+        <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16c2 0 2.5-1.5 5-1.5S9.5 16 12 16s2.5-1.5 5-1.5S19.5 16 22 16M2 20c2 0 2.5-1.5 5-1.5S9.5 20 12 20s2.5-1.5 5-1.5S19.5 20 22 20M7 14V5a2 2 0 1 1 4 0M13 14V5a2 2 0 1 1 4 0"/></svg>
+        <h3>حواف المسابح</h3>
+        <p>محيط المسبح وأرضيته المحيطة حيث يتراكم الكلس ورواسب الماء.</p>
+      </div>
+      <div>
+        <svg class="spec-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18"/><path d="M4 4h16v16H4z"/></svg>
+        <h3>الفواصل المتسخة</h3>
+        <p>يتغلغل في الفواصل بين البلاط ليزيل الرواسب دون الإضرار بها.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== الاستعمال ===================== -->
+<section id="utilisation">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>طريقة الاستعمال في ثلاث خطوات</h2>
+      <p class="lead">
+        الطريقة واحدة للتركيبتين. التزم دائمًا بنسبة التخفيف المكتوبة على ملصق
+        العبوة، واعمل في مكان جيد التهوية.
+      </p>
+    </div>
+
+    <!-- À FAIRE : reprendre les dosages exacts de l'étiquette. -->
+    <div class="steps reveal">
+      <div class="step">
+        <h3>تحضير السطح</h3>
+        <p>اكنس أو استعمل المكنسة الكهربائية لإزالة الغبار والرمل والحصى. المنتج يعمل بفعالية أكبر على سطح خالٍ من الرواسب الجافة.</p>
+      </div>
+      <div class="step">
+        <h3>التخفيف والتطبيق</h3>
+        <p>خفّف المنتج بالماء حسب النسبة المكتوبة على الملصق، وزّعه على السطح واتركه يتفاعل المدة المحددة دون أن يجف.</p>
+      </div>
+      <div class="step">
+        <h3>الفرك والشطف</h3>
+        <p>مرّر الفرشاة على المناطق الأكثر اتساخًا، ثم اشطف بالماء النظيف. لا تبقى أي طبقة دهنية على البلاط.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== أسئلة شائعة ===================== -->
+<section class="faq tile-pattern" id="questions">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>أسئلة شائعة</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <details>
+        <summary>ما الفرق بين DXS 6000 وDXS 6000N؟</summary>
+        <div class="faq-answer">
+          <p>DXS 6000 هي التركيبة الخارجية، مخصصة للفناءات والممرات وحواف المسابح حيث تأتي الرواسب من المطر والكلس والتلوث. أما DXS 6000N فهي التركيبة الاحترافية 3 في 1، تُستعمل داخل المنزل وخارجه، تنظف وتحمي وتلمّع سيراميك المنزل كله.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>هل يضر سيرانيت بالفواصل بين البلاط؟</summary>
+        <div class="faq-answer">
+          <p>لا: التركيبة مصممة لإزالة الرواسب العالقة في الفواصل دون الإضرار بها. وكما هو الحال مع أي منتج تنظيف، جرّبه أولًا على مساحة صغيرة غير ظاهرة قبل معالجة سطح كبير، خاصة إن كان البلاط قديمًا أو مساميًا.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>على أي أسطح يمكن استعماله؟</summary>
+        <div class="faq-answer">
+          <p>البلاط والغرانيت السيراميكي والحجر وبلاط الفناءات والممرات وحواف المسابح، داخل المنزل وخارجه. المنتج غير مخصص للباركيه ولا للأسطح القماشية ولا للمعادن غير المحمية.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>هل أختار عبوة 5 لتر أم 2 لتر؟</summary>
+        <div class="faq-answer">
+          <p>عبوة 5 لتر هي الخيار الاقتصادي: تناسب المساحات الكبيرة والفناءات والاستعمال المنتظم، خاصة لمحترفي التنظيف. أما عبوة 2 لتر فتناسب الاستعمال العَرَضي أو التجربة الأولى.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>هل تُوصّلون إلى كامل التراب الوطني؟</summary>
+        <div class="faq-answer">
+          <p>نعم، نوصّل إلى 58 ولاية. اذكر ولايتك وعنوانك في استمارة الطلب، أو أرسلهما مباشرة عبر واتساب على الرقم ‎+213 798 763 943‎.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>كيف أطلب المنتج؟</summary>
+        <div class="faq-answer">
+          <p>بطريقتين: استمارة الطلب أسفل هذه الصفحة، أو واتساب على الرقم ‎+213 798 763 943‎. في الحالتين نؤكد لك السعر ومدة التوصيل وطريقة الدفع قبل الإرسال.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== الطلب ===================== -->
+<section id="commande">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <div class="grout-rule"></div>
+      <h2>اطلب سيرانيت</h2>
+      <p class="lead">
+        املأ الاستمارة وسنتصل بك لتأكيد الطلب. وللرد الفوري، راسلنا على واتساب.
+      </p>
+    </div>
+
+    <div class="order-grid">
+      <form class="form" id="orderForm" data-redirect="index-ar.html" novalidate>
+        <input type="hidden" name="access_key" value="c2110998-9992-433b-8ac2-0254442b4442">
+        <input type="hidden" name="subject" value="طلب جديد — موقع سيرانيت (AR)">
+        <input type="hidden" name="from_name" value="Site CERANET">
+
+        <div class="honeypot" aria-hidden="true">
+          <label for="website">لا تملأ هذا الحقل</label>
+          <input type="text" id="website" name="botcheck" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="fName">الاسم واللقب</label>
+          <input type="text" id="fName" name="name" autocomplete="name"
+                 placeholder="اسمك الكامل" data-required>
+          <p class="error" data-error-for="fName" hidden>يرجى كتابة اسمك ولقبك.</p>
+        </div>
+
+        <div class="field">
+          <label for="fPhone">رقم الهاتف</label>
+          <input type="tel" id="fPhone" name="phone" autocomplete="tel"
+                 placeholder="06 XX XX XX XX" data-required>
+          <p class="error" data-error-for="fPhone" hidden>يرجى كتابة رقم هاتفك.</p>
+        </div>
+
+        <div class="field">
+          <label for="fProduct">المنتج المطلوب</label>
+          <select id="fProduct" name="product" data-required>
+            <option value="">اختر المنتج</option>
+            <option>سيرانيت للخارج DXS 6000 — 5 لتر</option>
+            <option>سيرانيت للخارج DXS 6000 — 2 لتر</option>
+            <option>سيرانيت الاحترافي DXS 6000N — 5 لتر</option>
+            <option>سيرانيت الاحترافي DXS 6000N — 2 لتر</option>
+            <option>لم أقرر بعد</option>
+          </select>
+          <p class="error" data-error-for="fProduct" hidden>يرجى اختيار المنتج.</p>
+        </div>
+
+        <div class="field">
+          <label for="fWilaya">الولاية</label>
+          <select id="fWilaya" name="wilaya" data-required>
+            <option value="">اختر ولايتك</option>
+            <option value="01">01 - أدرار</option>
+            <option value="02">02 - الشلف</option>
+            <option value="03">03 - الأغواط</option>
+            <option value="04">04 - أم البواقي</option>
+            <option value="05">05 - باتنة</option>
+            <option value="06">06 - بجاية</option>
+            <option value="07">07 - بسكرة</option>
+            <option value="08">08 - بشار</option>
+            <option value="09">09 - البليدة</option>
+            <option value="10">10 - البويرة</option>
+            <option value="11">11 - تمنراست</option>
+            <option value="12">12 - تبسة</option>
+            <option value="13">13 - تلمسان</option>
+            <option value="14">14 - تيارت</option>
+            <option value="15">15 - تيزي وزو</option>
+            <option value="16">16 - الجزائر</option>
+            <option value="17">17 - الجلفة</option>
+            <option value="18">18 - جيجل</option>
+            <option value="19">19 - سطيف</option>
+            <option value="20">20 - سعيدة</option>
+            <option value="21">21 - سكيكدة</option>
+            <option value="22">22 - سيدي بلعباس</option>
+            <option value="23">23 - عنابة</option>
+            <option value="24">24 - قالمة</option>
+            <option value="25">25 - قسنطينة</option>
+            <option value="26">26 - المدية</option>
+            <option value="27">27 - مستغانم</option>
+            <option value="28">28 - المسيلة</option>
+            <option value="29">29 - معسكر</option>
+            <option value="30">30 - ورقلة</option>
+            <option value="31">31 - وهران</option>
+            <option value="32">32 - البيض</option>
+            <option value="33">33 - إليزي</option>
+            <option value="34">34 - برج بوعريريج</option>
+            <option value="35">35 - بومرداس</option>
+            <option value="36">36 - الطارف</option>
+            <option value="37">37 - تندوف</option>
+            <option value="38">38 - تيسمسيلت</option>
+            <option value="39">39 - الوادي</option>
+            <option value="40">40 - خنشلة</option>
+            <option value="41">41 - سوق أهراس</option>
+            <option value="42">42 - تيبازة</option>
+            <option value="43">43 - ميلة</option>
+            <option value="44">44 - عين الدفلى</option>
+            <option value="45">45 - النعامة</option>
+            <option value="46">46 - عين تموشنت</option>
+            <option value="47">47 - غرداية</option>
+            <option value="48">48 - غليزان</option>
+            <option value="49">49 - تيميمون</option>
+            <option value="50">50 - برج باجي مختار</option>
+            <option value="51">51 - أولاد جلال</option>
+            <option value="52">52 - بني عباس</option>
+            <option value="53">53 - عين صالح</option>
+            <option value="54">54 - عين قزام</option>
+            <option value="55">55 - تقرت</option>
+            <option value="56">56 - جانت</option>
+            <option value="57">57 - المغير</option>
+            <option value="58">58 - المنيعة</option>
+          </select>
+          <p class="error" data-error-for="fWilaya" hidden>يرجى اختيار ولايتك.</p>
+        </div>
+
+        <div class="field field--wide">
+          <label for="fAddress">عنوان التوصيل</label>
+          <input type="text" id="fAddress" name="address" autocomplete="street-address"
+                 placeholder="الشارع، الحي، المدينة" data-required>
+          <p class="error" data-error-for="fAddress" hidden>يرجى كتابة عنوان التوصيل.</p>
+        </div>
+
+        <div class="field field--wide">
+          <label for="fMessage">رسالة <span class="optional">(اختياري)</span></label>
+          <textarea id="fMessage" name="message" rows="4"
+                    placeholder="الكمية المطلوبة، نوع السطح المراد تنظيفه، أو أي سؤال…"></textarea>
+        </div>
+
+        <div class="field field--wide">
+          <label for="challengeAnswer">التحقق</label>
+          <div class="challenge" id="challenge">
+            <p class="challenge-q">
+              كم يساوي <span id="challengeA">3</span> + <span id="challengeB">5</span>؟
+              <small>عملية جمع بسيطة، لاستبعاد الروبوتات.</small>
+            </p>
+            <input type="number" inputmode="numeric" id="challengeAnswer"
+                   name="challenge_answer" placeholder="؟" autocomplete="off"
+                   aria-label="نتيجة عملية الجمع">
+            <button type="button" id="challengeRenew" aria-label="تغيير العملية">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0A2846" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v6h-6"/></svg>
+            </button>
+          </div>
+          <p class="error" data-error-for="challengeAnswer" hidden>النتيجة غير صحيحة، حاول مجددًا.</p>
+        </div>
+
+        <p class="form-error" hidden>
+          لم يتم الإرسال. حاول مجددًا، أو راسلنا مباشرة على واتساب.
+        </p>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit" data-sending="جارٍ الإرسال…">
+            أرسل الطلب
+          </button>
+          <a class="btn btn-wa" href="https://wa.me/213798763943" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2zm5.5-5.8c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg>
+            راسلنا على واتساب
+          </a>
+        </div>
+      </form>
+
+      <aside class="contact-card reveal">
+        <h3>تواصل معنا مباشرة</h3>
+        <ul class="contact-list">
+          <li>
+            <a href="https://wa.me/213798763943" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="#1FAA55" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2z"/></svg>
+              <span><span class="label">واتساب</span><span class="value" dir="ltr">+213 798 763 943</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+213560001185">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1D4B7F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              <span><span class="label">الهاتف</span><span class="value" dir="ltr">+213 560 001 185</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:ramissaceram@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D23227" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              <span><span class="label">البريد الإلكتروني</span><span class="value">ramissaceram@gmail.com</span></span>
+            </a>
+          </li>
+          <li>
+            <div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#51A959" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <span><span class="label">منطقة التوصيل</span><span class="value">58 ولاية عبر الجزائر</span></span>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== التذييل ===================== -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo"><img src="assets/img/ceranet-logo.svg" alt="سيرانيت" width="115" height="30" loading="lazy"></span>
+        <p>منظفات سيراميك احترافية للبلاط الداخلي والخارجي، موزَّعة في الجزائر.</p>
+      </div>
+      <div>
+        <h3>المنتجات</h3>
+        <ul>
+          <li><a href="#gamme">سيرانيت للخارج DXS 6000</a></li>
+          <li><a href="#gamme">سيرانيت الاحترافي DXS 6000N</a></li>
+          <li><a href="#surfaces">الأسطح المتوافقة</a></li>
+          <li><a href="#utilisation">طريقة الاستعمال</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>الاتصال</h3>
+        <ul>
+          <li><a href="https://wa.me/213798763943" target="_blank" rel="noopener">واتساب <span dir="ltr">+213 798 763 943</span></a></li>
+          <li><a href="tel:+213560001185"><span dir="ltr">+213 560 001 185</span></a></li>
+          <li><a href="mailto:ramissaceram@gmail.com">ramissaceram@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>اللغة</h3>
+        <ul>
+          <li><a href="index-ar.html" hreflang="ar">العربية</a></li>
+          <li><a href="/" hreflang="fr" lang="fr">Français</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2026 CERANET Propre. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<div class="sent" id="sent" role="status" aria-live="polite">
+  <div>
+    <div class="sent-mark">
+      <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23"/><path d="M15 27l8 8 15-17"/></svg>
+    </div>
+    <h2>تم إرسال الطلب</h2>
+    <p>شكرًا لك. سنتصل بك قريبًا لتأكيد المنتج والسعر ومدة التوصيل.</p>
+    <p style="margin-top:1.5rem;font-size:.88rem;opacity:.75">العودة إلى الصفحة الرئيسية خلال <span data-countdown>5</span> ث</p>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.ceranet.dz/#organisation",
+      "name": "CERANET",
+      "alternateName": ["سيرانيت", "CERANET Propre"],
+      "url": "https://www.ceranet.dz/",
+      "logo": "https://www.ceranet.dz/assets/img/icon-512.png",
+      "image": "https://www.ceranet.dz/assets/img/og-ar.jpg",
+      "description": "منظفات سيراميك احترافية للبلاط الداخلي والخارجي، موزَّعة في الجزائر.",
+      "email": "ramissaceram@gmail.com",
+      "telephone": "+213560001185",
+      "address": { "@type": "PostalAddress", "addressCountry": "DZ" },
+      "areaServed": { "@type": "Country", "name": "الجزائر" },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+213798763943",
+        "contactType": "sales",
+        "availableLanguage": ["ar", "fr"],
+        "areaServed": "DZ"
+      }]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ceranet.dz/#site-ar",
+      "url": "https://www.ceranet.dz/index-ar.html",
+      "name": "سيرانيت",
+      "inLanguage": "ar",
+      "publisher": { "@id": "https://www.ceranet.dz/#organisation" }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.ceranet.dz/index-ar.html#dxs6000",
+      "name": "سيرانيت للخارج DXS 6000",
+      "sku": "DXS 6000",
+      "category": "منظف سيراميك خارجي",
+      "description": "منظف سيراميك خارجي مركّز للفناءات والممرات وحواف المسابح. يذيب الكلس والطحالب والرواسب العنيدة دون الإضرار بالفواصل. متوفر بعبوات 5 لتر و2 لتر.",
+      "image": "https://www.ceranet.dz/assets/img/bidon-bleu-5l-900.webp",
+      "brand": { "@id": "https://www.ceranet.dz/#organisation" }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.ceranet.dz/index-ar.html#dxs6000n",
+      "name": "سيرانيت الاحترافي DXS 6000N",
+      "sku": "DXS 6000N",
+      "category": "منظف سيراميك داخلي وخارجي",
+      "description": "منظف سيراميك احترافي 3 في 1 للداخل والخارج: يحمي وينظف ويلمّع البلاط والغرانيت السيراميكي والحجر دون طبقة دهنية ودون آثار. متوفر بعبوات 5 لتر و2 لتر.",
+      "image": "https://www.ceranet.dz/assets/img/bidon-jaune-5l-900.webp",
+      "brand": { "@id": "https://www.ceranet.dz/#organisation" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.ceranet.dz/index-ar.html#faq",
+      "inLanguage": "ar",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ما الفرق بين DXS 6000 وDXS 6000N؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "DXS 6000 هي التركيبة الخارجية، مخصصة للفناءات والممرات وحواف المسابح حيث تأتي الرواسب من المطر والكلس والتلوث. أما DXS 6000N فهي التركيبة الاحترافية 3 في 1، تُستعمل داخل المنزل وخارجه، تنظف وتحمي وتلمّع سيراميك المنزل كله." }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يضر سيرانيت بالفواصل بين البلاط؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "لا: التركيبة مصممة لإزالة الرواسب العالقة في الفواصل دون الإضرار بها. جرّبه أولًا على مساحة صغيرة غير ظاهرة قبل معالجة سطح كبير، خاصة إن كان البلاط قديمًا أو مساميًا." }
+        },
+        {
+          "@type": "Question",
+          "name": "على أي أسطح يمكن استعمال سيرانيت؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "البلاط والغرانيت السيراميكي والحجر وبلاط الفناءات والممرات وحواف المسابح، داخل المنزل وخارجه. المنتج غير مخصص للباركيه ولا للأسطح القماشية ولا للمعادن غير المحمية." }
+        },
+        {
+          "@type": "Question",
+          "name": "هل أختار عبوة 5 لتر أم 2 لتر؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "عبوة 5 لتر هي الخيار الاقتصادي: تناسب المساحات الكبيرة والفناءات والاستعمال المنتظم، خاصة لمحترفي التنظيف. أما عبوة 2 لتر فتناسب الاستعمال العَرَضي أو التجربة الأولى." }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يوصّل سيرانيت إلى كامل التراب الجزائري؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "نعم، التوصيل متاح إلى 58 ولاية. الطلب يتم عبر استمارة الموقع أو عبر واتساب على الرقم +213 798 763 943." }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف أطلب منتجات سيرانيت؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "بطريقتين: استمارة الطلب في الموقع، أو واتساب على الرقم +213 798 763 943. في الحالتين يتم تأكيد السعر ومدة التوصيل وطريقة الدفع قبل الإرسال." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
 </html>

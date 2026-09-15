@@ -1,0 +1,7 @@
+# Netlify — redirections
+# URL arabe lisible, sans dupliquer le fichier.
+/ar             /index-ar.html   200
+/ar/            /index-ar.html   200
+
+# Ancien nom de fichier, au cas où il aurait déjà été indexé
+/index-fr.html  /                301

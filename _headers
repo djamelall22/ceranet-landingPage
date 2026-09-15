@@ -1,0 +1,19 @@
+# ============================================================
+# Netlify — en-têtes HTTP
+# Les fichiers d'assets portent un nom stable, on peut donc les
+# mettre en cache très longtemps. Les pages HTML, elles, doivent
+# être revalidées à chaque visite pour que les mises à jour
+# soient visibles immédiatement.
+# ============================================================
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  X-Frame-Options: SAMEORIGIN
