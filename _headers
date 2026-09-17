@@ -6,8 +6,16 @@
 # soient visibles immédiatement.
 # ============================================================
 
-/assets/*
+/assets/img/*
   Cache-Control: public, max-age=31536000, immutable
+
+# style.css et les scripts gardent le même nom : pas d'immutable, sinon
+# une modification ne parvient jamais aux visiteurs déjà venus.
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/js/*
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
