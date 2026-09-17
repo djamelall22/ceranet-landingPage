@@ -1,8 +1,25 @@
 # CERANET — site refait
 
 Site statique, deux langues (français / arabe RTL), sans framework ni
-dépendance : plus de Tailwind CDN, plus de GSAP. Déployable tel quel sur
-Netlify (glisser le dossier).
+dépendance : plus de Tailwind CDN, plus de GSAP.
+
+Hébergement : **Vercel**. La configuration est dans `vercel.json`
+(cache des assets, en-têtes de sécurité, redirections). Les fichiers
+`_headers` et `_redirects` sont l'équivalent Netlify : Vercel les
+ignore, ils ne servent que si le site déménage un jour.
+
+### Le site ne se met pas à jour ?
+
+1. Déploiement par Git : vérifier que le commit est bien poussé sur la
+   branche de production et que le build apparaît dans l'onglet
+   « Deployments » de Vercel.
+2. Déploiement manuel (`vercel --prod` ou glisser-déposer) : c'est le
+   **dossier entier** qu'il faut renvoyer, pas seulement les fichiers
+   modifiés.
+3. Si le déploiement est vert mais que l'ancienne version s'affiche
+   encore, c'est le cache du navigateur : rechargement forcé
+   (Ctrl+Maj+R, ou Cmd+Maj+R sur Mac), ou une fenêtre privée pour
+   vérifier.
 
 ## Arborescence
 
@@ -12,8 +29,9 @@ index-ar.html       page arabe (RTL)
 robots.txt          autorise explicitement les robots d'IA
 sitemap.xml         avec les alternates hreflang
 site.webmanifest
-_headers            cache et en-têtes de sécurité (Netlify)
-_redirects          /ar → page arabe, /index-fr.html → accueil (Netlify)
+vercel.json         cache, en-têtes de sécurité et redirections (Vercel)
+_headers            équivalent Netlify, ignoré par Vercel
+_redirects          équivalent Netlify, ignoré par Vercel
 assets/css/style.css
 assets/js/app.js    menu, slider avant/après, sélecteur 5 L / 2 L
 assets/js/form.js   validation, anti-robot, envoi Web3Forms
