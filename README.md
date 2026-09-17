@@ -26,6 +26,8 @@ ignore, ils ne servent que si le site déménage un jour.
 ```
 index.html          page française
 index-ar.html       page arabe (RTL)
+commande.html       page de commande seule, pour les publicités (FR)
+commande-ar.html    page de commande seule, pour les publicités (AR)
 robots.txt          autorise explicitement les robots d'IA
 sitemap.xml         avec les alternates hreflang
 site.webmanifest
@@ -65,6 +67,24 @@ assets/img/         AVIF + WebP + PNG de secours, icônes, images Open Graph
    (`<input type="hidden" name="access_key" …>`). Faire ensuite un envoi
    de test depuis le site en ligne, et vérifier les indésirables.
 8. **E-mail.** Une adresse sur le domaine plutôt que Gmail.
+
+## Pages de commande pour la publicité
+
+`commande.html` et `commande-ar.html` ne contiennent que le formulaire :
+ni navigation, ni sections à faire défiler. À utiliser comme destination
+des annonces Facebook, Instagram ou Google.
+
+URL courtes configurées dans `vercel.json` :
+
+| Adresse à mettre dans l'annonce | Page servie        |
+|---------------------------------|--------------------|
+| `/commande`                     | commande.html      |
+| `/commande-ar` ou `/talab`      | commande-ar.html   |
+
+Les deux pages sont en `noindex` : elles ne doivent pas concurrencer la
+page d'accueil dans les résultats de recherche. Les commandes arrivent
+avec l'objet « Publicité » et un champ `origine`, pour distinguer d'un
+coup d'œil ce qui vient des annonces de ce qui vient du site.
 
 ## Poids
 

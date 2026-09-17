@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Commander CERANET — nettoyant céramique, livraison 58 wilayas</title>
+<meta name="description" content="Remplissez le formulaire et nous vous rappelons pour confirmer votre commande de nettoyant céramique CERANET. Bidons de 5 L et 2 L, livraison dans toute l'Algérie.">
+
+<!-- Page de destination publicitaire : volontairement hors index, pour ne pas
+     concurrencer la page d'accueil dans les résultats de recherche. -->
+<meta name="robots" content="noindex, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CERANET">
+<meta property="og:title" content="Commander CERANET — nettoyant céramique, livraison 58 wilayas">
+<meta property="og:description" content="Remplissez le formulaire et nous vous rappelons pour confirmer votre commande de nettoyant céramique CERANET. Bidons de 5 L et 2 L, livraison dans toute l'Algérie.">
+<meta property="og:image" content="https://www.ceranet.dz/assets/img/og-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#0A2846">
+
+<link rel="icon" href="assets/img/ceranet-logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script src="assets/js/form.js" defer></script>
+</head>
+
+<body class="tile-pattern">
+
+<main class="lp">
+  <div class="shell">
+
+    <div class="lp-bar">
+      <a href="index.html" aria-label="CERANET, accueil">
+        <img src="assets/img/ceranet-logo.svg" alt="CERANET" width="168" height="44">
+      </a>
+      <a class="lang-switch" href="commande-ar.html" hreflang="ar" lang="ar">العربية</a>
+    </div>
+
+    <div class="lp-shots">
+      <picture>
+        <source type="image/avif" srcset="assets/img/bidon-bleu-5l-520.avif">
+        <source type="image/webp" srcset="assets/img/bidon-bleu-5l-520.webp">
+        <img src="assets/img/bidon-bleu-5l-520.png" width="592" height="900"
+             fetchpriority="high" decoding="async" alt="Bidon CERANET Extérieur DXS 6000 de 5 litres.">
+      </picture>
+      <picture>
+        <source type="image/avif" srcset="assets/img/bidon-jaune-5l-520.avif">
+        <source type="image/webp" srcset="assets/img/bidon-jaune-5l-520.webp">
+        <img src="assets/img/bidon-jaune-5l-520.png" width="596" height="900"
+             decoding="async" alt="Bidon CERANET Professionnel DXS 6000N de 5 litres.">
+      </picture>
+    </div>
+
+    <div class="lp-head">
+      <div class="grout-rule"></div>
+      <h1>Commandez CERANET en deux minutes</h1>
+      <p class="lead">Remplissez le formulaire ci-dessous, nous vous rappelons pour confirmer le produit, le prix et le délai de livraison.</p>
+    </div>
+
+    <div class="lp-trust">
+      <div><strong>58 wilayas</strong><span>Livraison dans toute l'Algérie</span></div>
+      <div><strong>5 L et 2 L</strong><span>Deux contenances au choix</span></div>
+      <div><strong>Rappel gratuit</strong><span>Confirmation par téléphone</span></div>
+    </div>
+
+    <form class="form" id="orderForm" data-redirect="commande.html" novalidate>
+      <!-- Clé Web3Forms liée à ceranetboumama@gmail.com : c'est elle, et non
+         l'adresse affichée sur la page, qui décide où arrivent les commandes.
+         Elle est publique par conception, aucun risque à la laisser visible.
+         Si l'adresse de réception change un jour, créer une nouvelle clé sur
+         web3forms.com et la remplacer dans index.html ET index-ar.html. -->
+      <input type="hidden" name="access_key" value="5597eade-ddc3-42f3-97f8-0fcc0684e5a7">
+      <input type="hidden" name="subject" value="Nouvelle commande — Publicité (FR)">
+      <input type="hidden" name="from_name" value="Site CERANET">
+      <input type="hidden" name="origine" value="Page publicité (FR)">
+
+      <div class="honeypot" aria-hidden="true">
+        <label for="website">Ne remplissez pas ce champ</label>
+        <input type="text" id="website" name="botcheck" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label for="fName">Nom et prénom</label>
+        <input type="text" id="fName" name="name" autocomplete="name"
+           placeholder="Votre nom complet" data-required>
+        <p class="error" data-error-for="fName" hidden>Indiquez votre nom et prénom.</p>
+      </div>
+
+      <div class="field">
+        <label for="fPhone">Téléphone</label>
+        <input type="tel" id="fPhone" name="phone" autocomplete="tel"
+           placeholder="06 XX XX XX XX" data-required>
+        <p class="error" data-error-for="fPhone" hidden>Indiquez un numéro de téléphone.</p>
+      </div>
+
+      <div class="field">
+        <label for="fProduct">Type de bidon</label>
+        <select id="fProduct" name="product" data-required>
+        <option value="">Choisissez un produit</option>
+        <option>CERANET Extérieur DXS 6000</option>
+        <option>CERANET Professionnel DXS 6000N</option>
+        <option>Je ne sais pas encore</option>
+        </select>
+        <p class="error" data-error-for="fProduct" hidden>Choisissez un type de bidon.</p>
+      </div>
+
+      <div class="field">
+        <label for="fSize">Contenance</label>
+        <select id="fSize" name="size" data-required>
+        <option value="">Choisissez la contenance</option>
+        <option>5 litres</option>
+        <option>2 litres</option>
+        </select>
+        <p class="error" data-error-for="fSize" hidden>Choisissez la contenance.</p>
+      </div>
+
+      <div class="field">
+        <label for="fQty">Nombre de bidons</label>
+        <input type="number" id="fQty" name="quantity" min="1" max="500" step="1"
+           inputmode="numeric" value="1" data-required>
+        <p class="error" data-error-for="fQty" hidden>Indiquez combien de bidons vous souhaitez.</p>
+      </div>
+
+      <div class="field">
+        <label for="fWilaya">Wilaya</label>
+        <select id="fWilaya" name="wilaya" data-required>
+        <option value="">Choisissez votre wilaya</option>
+        <option>01 - Adrar</option>
+        <option>02 - Chlef</option>
+        <option>03 - Laghouat</option>
+        <option>04 - Oum El Bouaghi</option>
+        <option>05 - Batna</option>
+        <option>06 - Béjaïa</option>
+        <option>07 - Biskra</option>
+        <option>08 - Béchar</option>
+        <option>09 - Blida</option>
+        <option>10 - Bouira</option>
+        <option>11 - Tamanrasset</option>
+        <option>12 - Tébessa</option>
+        <option>13 - Tlemcen</option>
+        <option>14 - Tiaret</option>
+        <option>15 - Tizi Ouzou</option>
+        <option>16 - Alger</option>
+        <option>17 - Djelfa</option>
+        <option>18 - Jijel</option>
+        <option>19 - Sétif</option>
+        <option>20 - Saïda</option>
+        <option>21 - Skikda</option>
+        <option>22 - Sidi Bel Abbès</option>
+        <option>23 - Annaba</option>
+        <option>24 - Guelma</option>
+        <option>25 - Constantine</option>
+        <option>26 - Médéa</option>
+        <option>27 - Mostaganem</option>
+        <option>28 - M'Sila</option>
+        <option>29 - Mascara</option>
+        <option>30 - Ouargla</option>
+        <option>31 - Oran</option>
+        <option>32 - El Bayadh</option>
+        <option>33 - Illizi</option>
+        <option>34 - Bordj Bou Arréridj</option>
+        <option>35 - Boumerdès</option>
+        <option>36 - El Tarf</option>
+        <option>37 - Tindouf</option>
+        <option>38 - Tissemsilt</option>
+        <option>39 - El Oued</option>
+        <option>40 - Khenchela</option>
+        <option>41 - Souk Ahras</option>
+        <option>42 - Tipaza</option>
+        <option>43 - Mila</option>
+        <option>44 - Aïn Defla</option>
+        <option>45 - Naâma</option>
+        <option>46 - Aïn Témouchent</option>
+        <option>47 - Ghardaïa</option>
+        <option>48 - Relizane</option>
+        <option>49 - Timimoun</option>
+        <option>50 - Bordj Badji Mokhtar</option>
+        <option>51 - Ouled Djellal</option>
+        <option>52 - Béni Abbès</option>
+        <option>53 - In Salah</option>
+        <option>54 - In Guezzam</option>
+        <option>55 - Touggourt</option>
+        <option>56 - Djanet</option>
+        <option>57 - El M'Ghair</option>
+        <option>58 - El Meniaa</option>
+        </select>
+        <p class="error" data-error-for="fWilaya" hidden>Choisissez votre wilaya.</p>
+      </div>
+
+      <div class="field field--wide">
+        <label for="fAddress">Adresse de livraison</label>
+        <input type="text" id="fAddress" name="address" autocomplete="street-address"
+           placeholder="Rue, quartier, ville" data-required>
+        <p class="error" data-error-for="fAddress" hidden>Indiquez votre adresse de livraison.</p>
+      </div>
+
+      <div class="field field--wide">
+        <label for="fMessage">Message</label>
+        <textarea id="fMessage" name="message" rows="4" data-required
+              placeholder="Type de surface à traiter, état du carrelage, question…"></textarea>
+        <p class="error" data-error-for="fMessage" hidden>Écrivez-nous un mot sur votre besoin.</p>
+      </div>
+
+      <div class="field field--wide">
+        <label for="challengeAnswer">Vérification</label>
+        <div class="challenge" id="challenge">
+        <p class="challenge-q">
+          Combien font <span id="challengeA">3</span> + <span id="challengeB">5</span> ?
+          <small>Une simple addition, pour écarter les robots.</small>
+        </p>
+        <input type="number" inputmode="numeric" id="challengeAnswer"
+             name="challenge_answer" placeholder="?" autocomplete="off"
+             aria-label="Résultat de l'addition">
+        <button type="button" id="challengeRenew" aria-label="Changer le calcul">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0A2846" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v6h-6"/></svg>
+        </button>
+        </div>
+        <p class="error" data-error-for="challengeAnswer" hidden>Le résultat ne correspond pas, réessayez.</p>
+      </div>
+
+      <p class="form-error" hidden>
+        L'envoi n'a pas abouti. Réessayez, ou contactez-nous directement sur WhatsApp.
+      </p>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit" data-sending="Envoi en cours…">
+        Envoyer ma commande
+        </button>
+        <a class="btn btn-wa" href="https://wa.me/213560443557" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.1 1 1-3-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.1 7.1 3.2 12 3.2s8.8 3.9 8.8 8.8-3.9 8.2-8.8 8.2zm5.5-5.8c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.2-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg>
+        Écrire sur WhatsApp
+        </a>
+      </div>
+    </form>
+
+    <p class="lp-foot">
+      Vous préférez commander de vive voix ? Écrivez-nous sur WhatsApp au <a href="https://wa.me/213560443557" target="_blank" rel="noopener" dir="ltr">+213 560 443 557</a>
+    </p>
+
+  </div>
+</main>
+
+<div class="sent" id="sent" role="status" aria-live="polite">
+  <div>
+    <div class="sent-mark">
+      <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23"/><path d="M15 27l8 8 15-17"/></svg>
+    </div>
+    <h2>Commande envoyée</h2>
+    <p>Merci. Nous vous rappelons rapidement pour confirmer le produit, le prix et le délai de livraison.</p>
+  </div>
+</div>
+
+</body>
+</html>
