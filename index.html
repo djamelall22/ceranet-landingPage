@@ -477,80 +477,95 @@
         </div>
 
         <div class="field">
-          <label for="fProduct">Produit souhaité</label>
+          <label for="fProduct">Type de bidon</label>
           <select id="fProduct" name="product" data-required>
             <option value="">Choisissez un produit</option>
-            <option>CERANET Extérieur DXS 6000 — 5 L</option>
-            <option>CERANET Extérieur DXS 6000 — 2 L</option>
-            <option>CERANET Professionnel DXS 6000N — 5 L</option>
-            <option>CERANET Professionnel DXS 6000N — 2 L</option>
+            <option>CERANET Extérieur DXS 6000</option>
+            <option>CERANET Professionnel DXS 6000N</option>
             <option>Je ne sais pas encore</option>
           </select>
-          <p class="error" data-error-for="fProduct" hidden>Choisissez un produit.</p>
+          <p class="error" data-error-for="fProduct" hidden>Choisissez un type de bidon.</p>
+        </div>
+
+        <div class="field">
+          <label for="fSize">Contenance</label>
+          <select id="fSize" name="size" data-required>
+            <option value="">Choisissez la contenance</option>
+            <option>5 litres</option>
+            <option>2 litres</option>
+          </select>
+          <p class="error" data-error-for="fSize" hidden>Choisissez la contenance.</p>
+        </div>
+
+        <div class="field">
+          <label for="fQty">Nombre de bidons</label>
+          <input type="number" id="fQty" name="quantity" min="1" max="500" step="1"
+                 inputmode="numeric" value="1" data-required>
+          <p class="error" data-error-for="fQty" hidden>Indiquez combien de bidons vous souhaitez.</p>
         </div>
 
         <div class="field">
           <label for="fWilaya">Wilaya</label>
           <select id="fWilaya" name="wilaya" data-required>
             <option value="">Choisissez votre wilaya</option>
-            <option value="01">01 - Adrar</option>
-            <option value="02">02 - Chlef</option>
-            <option value="03">03 - Laghouat</option>
-            <option value="04">04 - Oum El Bouaghi</option>
-            <option value="05">05 - Batna</option>
-            <option value="06">06 - Béjaïa</option>
-            <option value="07">07 - Biskra</option>
-            <option value="08">08 - Béchar</option>
-            <option value="09">09 - Blida</option>
-            <option value="10">10 - Bouira</option>
-            <option value="11">11 - Tamanrasset</option>
-            <option value="12">12 - Tébessa</option>
-            <option value="13">13 - Tlemcen</option>
-            <option value="14">14 - Tiaret</option>
-            <option value="15">15 - Tizi Ouzou</option>
-            <option value="16">16 - Alger</option>
-            <option value="17">17 - Djelfa</option>
-            <option value="18">18 - Jijel</option>
-            <option value="19">19 - Sétif</option>
-            <option value="20">20 - Saïda</option>
-            <option value="21">21 - Skikda</option>
-            <option value="22">22 - Sidi Bel Abbès</option>
-            <option value="23">23 - Annaba</option>
-            <option value="24">24 - Guelma</option>
-            <option value="25">25 - Constantine</option>
-            <option value="26">26 - Médéa</option>
-            <option value="27">27 - Mostaganem</option>
-            <option value="28">28 - M'Sila</option>
-            <option value="29">29 - Mascara</option>
-            <option value="30">30 - Ouargla</option>
-            <option value="31">31 - Oran</option>
-            <option value="32">32 - El Bayadh</option>
-            <option value="33">33 - Illizi</option>
-            <option value="34">34 - Bordj Bou Arréridj</option>
-            <option value="35">35 - Boumerdès</option>
-            <option value="36">36 - El Tarf</option>
-            <option value="37">37 - Tindouf</option>
-            <option value="38">38 - Tissemsilt</option>
-            <option value="39">39 - El Oued</option>
-            <option value="40">40 - Khenchela</option>
-            <option value="41">41 - Souk Ahras</option>
-            <option value="42">42 - Tipaza</option>
-            <option value="43">43 - Mila</option>
-            <option value="44">44 - Aïn Defla</option>
-            <option value="45">45 - Naâma</option>
-            <option value="46">46 - Aïn Témouchent</option>
-            <option value="47">47 - Ghardaïa</option>
-            <option value="48">48 - Relizane</option>
-            <option value="49">49 - Timimoun</option>
-            <option value="50">50 - Bordj Badji Mokhtar</option>
-            <option value="51">51 - Ouled Djellal</option>
-            <option value="52">52 - Béni Abbès</option>
-            <option value="53">53 - In Salah</option>
-            <option value="54">54 - In Guezzam</option>
-            <option value="55">55 - Touggourt</option>
-            <option value="56">56 - Djanet</option>
-            <option value="57">57 - El M'Ghair</option>
-            <option value="58">58 - El Meniaa</option>
+            <option>01 - Adrar</option>
+            <option>02 - Chlef</option>
+            <option>03 - Laghouat</option>
+            <option>04 - Oum El Bouaghi</option>
+            <option>05 - Batna</option>
+            <option>06 - Béjaïa</option>
+            <option>07 - Biskra</option>
+            <option>08 - Béchar</option>
+            <option>09 - Blida</option>
+            <option>10 - Bouira</option>
+            <option>11 - Tamanrasset</option>
+            <option>12 - Tébessa</option>
+            <option>13 - Tlemcen</option>
+            <option>14 - Tiaret</option>
+            <option>15 - Tizi Ouzou</option>
+            <option>16 - Alger</option>
+            <option>17 - Djelfa</option>
+            <option>18 - Jijel</option>
+            <option>19 - Sétif</option>
+            <option>20 - Saïda</option>
+            <option>21 - Skikda</option>
+            <option>22 - Sidi Bel Abbès</option>
+            <option>23 - Annaba</option>
+            <option>24 - Guelma</option>
+            <option>25 - Constantine</option>
+            <option>26 - Médéa</option>
+            <option>27 - Mostaganem</option>
+            <option>28 - M'Sila</option>
+            <option>29 - Mascara</option>
+            <option>30 - Ouargla</option>
+            <option>31 - Oran</option>
+            <option>32 - El Bayadh</option>
+            <option>33 - Illizi</option>
+            <option>34 - Bordj Bou Arréridj</option>
+            <option>35 - Boumerdès</option>
+            <option>36 - El Tarf</option>
+            <option>37 - Tindouf</option>
+            <option>38 - Tissemsilt</option>
+            <option>39 - El Oued</option>
+            <option>40 - Khenchela</option>
+            <option>41 - Souk Ahras</option>
+            <option>42 - Tipaza</option>
+            <option>43 - Mila</option>
+            <option>44 - Aïn Defla</option>
+            <option>45 - Naâma</option>
+            <option>46 - Aïn Témouchent</option>
+            <option>47 - Ghardaïa</option>
+            <option>48 - Relizane</option>
+            <option>49 - Timimoun</option>
+            <option>50 - Bordj Badji Mokhtar</option>
+            <option>51 - Ouled Djellal</option>
+            <option>52 - Béni Abbès</option>
+            <option>53 - In Salah</option>
+            <option>54 - In Guezzam</option>
+            <option>55 - Touggourt</option>
+            <option>56 - Djanet</option>
+            <option>57 - El M'Ghair</option>
+            <option>58 - El Meniaa</option>
           </select>
           <p class="error" data-error-for="fWilaya" hidden>Choisissez votre wilaya.</p>
         </div>
@@ -563,9 +578,10 @@
         </div>
 
         <div class="field field--wide">
-          <label for="fMessage">Message <span class="optional">(facultatif)</span></label>
-          <textarea id="fMessage" name="message" rows="4"
-                    placeholder="Quantité souhaitée, type de surface à traiter, question…"></textarea>
+          <label for="fMessage">Message</label>
+          <textarea id="fMessage" name="message" rows="4" data-required
+                    placeholder="Type de surface à traiter, état du carrelage, question…"></textarea>
+          <p class="error" data-error-for="fMessage" hidden>Écrivez-nous un mot sur votre besoin.</p>
         </div>
 
         <div class="field field--wide">
@@ -610,9 +626,9 @@
             </a>
           </li>
           <li>
-            <a href="tel:+213560001185">
+            <a href="tel:+213560443557">
               <svg viewBox="0 0 24 24" fill="none" stroke="#1D4B7F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.1 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-              <span><span class="label">Téléphone</span><span class="value" dir="ltr">+213 560 001 185</span></span>
+              <span><span class="label">Téléphone</span><span class="value" dir="ltr">+213 560 443 557</span></span>
             </a>
           </li>
           <li>
@@ -656,7 +672,7 @@
         <h3>Contact</h3>
         <ul>
           <li><a href="https://wa.me/213798763943" target="_blank" rel="noopener">WhatsApp <span dir="ltr">+213 798 763 943</span></a></li>
-          <li><a href="tel:+213560001185"><span dir="ltr">+213 560 001 185</span></a></li>
+          <li><a href="tel:+213560443557"><span dir="ltr">+213 560 443 557</span></a></li>
           <li><a href="mailto:ramissaceram@gmail.com">ramissaceram@gmail.com</a></li>
         </ul>
       </div>
@@ -704,7 +720,7 @@
       "image": "https://www.ceranet.dz/assets/img/og-fr.jpg",
       "description": "Nettoyants céramiques professionnels pour carrelage intérieur et extérieur, distribués en Algérie.",
       "email": "ramissaceram@gmail.com",
-      "telephone": "+213560001185",
+      "telephone": "+213560443557",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "DZ"

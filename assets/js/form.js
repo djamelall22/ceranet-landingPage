@@ -33,19 +33,32 @@
       if (message) message.hidden = !invalid;
     }
 
+    function isFilled(field) {
+      if (!field.value.trim()) return false;
+      /* Pour le nombre de bidons : un chiffre seul ne suffit pas, il doit
+         respecter le minimum, sinon on laisserait passer 0 ou -3. */
+      if (field.type === 'number') {
+        var n = Number(field.value);
+        var min = field.min === '' ? -Infinity : Number(field.min);
+        var max = field.max === '' ? Infinity : Number(field.max);
+        return Number.isFinite(n) && n >= min && n <= max;
+      }
+      return true;
+    }
+
     required.forEach(function (field) {
-      var recheck = function () { if (field.value.trim()) mark(field, false); };
+      var recheck = function () { if (isFilled(field)) mark(field, false); };
       field.addEventListener('input', recheck);
       field.addEventListener('change', recheck);
       field.addEventListener('blur', function () {
-        if (!field.value.trim()) mark(field, true);
+        if (!isFilled(field)) mark(field, true);
       });
     });
 
     function firstEmptyField() {
       var first = null;
       required.forEach(function (field) {
-        var empty = !field.value.trim();
+        var empty = !isFilled(field);
         mark(field, empty);
         if (empty && !first) first = field;
       });
