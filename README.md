@@ -55,7 +55,16 @@ assets/img/         AVIF + WebP + PNG de secours, icônes, images Open Graph
 6. **Google Business Profile.** Le levier hors-site le plus rentable pour
    un commerce local ; Google le recommande explicitement dans son guide
    sur la recherche générative.
-7. **E-mail.** Une adresse sur le domaine plutôt que Gmail.
+7. **Clé Web3Forms — indispensable pour recevoir les commandes.**
+   La clé présente dans le HTML est liée à l'adresse e-mail avec laquelle
+   elle a été créée. Modifier l'adresse affichée sur le site ne change pas
+   la destination des messages. Pour recevoir sur
+   `ceranetboumama@gmail.com` : aller sur web3forms.com, saisir cette
+   adresse, récupérer la nouvelle clé reçue par e-mail, puis la coller
+   dans `index.html` **et** dans `index-ar.html`
+   (`<input type="hidden" name="access_key" …>`). Faire ensuite un envoi
+   de test depuis le site en ligne, et vérifier les indésirables.
+8. **E-mail.** Une adresse sur le domaine plutôt que Gmail.
 
 ## Poids
 
