@@ -1,6 +1,8 @@
 # ============================================================
 # CERANET — robots.txt
-# Remplacer ceranet.dz par le vrai domaine.
+# Domaine actuel : ceranet.vercel.app
+# Le jour où ceranet.dz est branché, remplacer l'adresse partout
+# (voir la section « Changer de domaine » du README).
 #
 # Les robots d'IA sont autorisés EXPLICITEMENT : c'est la
 # première chose à vérifier quand on veut être cité par
@@ -65,4 +67,4 @@ Allow: /
 User-agent: DuckAssistBot
 Allow: /
 
-Sitemap: https://www.ceranet.dz/sitemap.xml
+Sitemap: https://ceranet.vercel.app/sitemap.xml

@@ -42,7 +42,7 @@ assets/img/         AVIF + WebP + PNG de secours, icônes, images Open Graph
 
 ## À faire avant la mise en ligne
 
-1. **Domaine.** Remplacer `https://www.ceranet.dz` dans : `index.html`,
+1. **Domaine.** Remplacer `https://ceranet.vercel.app` dans : `index.html`,
    `index-ar.html` (canonical, hreflang, og:url, JSON-LD), `sitemap.xml`,
    `robots.txt`.
 2. **Dosages.** Dans la section « Comment l'utiliser », reprendre les
@@ -113,3 +113,22 @@ pour eux.
   elle n'autorise qu'un envoi vers l'adresse configurée sur le compte.
 - Les anciennes bannières PNG ne sont plus chargées par le site. Elles
   restent parfaites pour Facebook et Instagram.
+
+## Changer de domaine
+
+Le jour où un vrai domaine est branché (`ceranet.dz` par exemple), une
+seule opération suffit : remplacer `https://ceranet.vercel.app` par la
+nouvelle adresse dans ces fichiers.
+
+| Fichier            | Ce qui est concerné                          |
+|--------------------|----------------------------------------------|
+| `index.html`       | canonical, hreflang, og:url, og:image, JSON-LD |
+| `index-ar.html`    | idem                                          |
+| `commande.html`    | og:image                                      |
+| `commande-ar.html` | og:image                                      |
+| `sitemap.xml`      | les `<loc>` et les alternates                 |
+| `robots.txt`       | la ligne `Sitemap:`                           |
+
+Soit 54 occurrences au total, toutes identiques : un rechercher-remplacer
+dans l'éditeur suffit. Ensuite, redéclarer le sitemap dans Google Search
+Console sous le nouveau domaine.

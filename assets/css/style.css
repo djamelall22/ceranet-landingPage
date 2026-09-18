@@ -430,6 +430,13 @@ section{ padding-block:clamp(3.5rem,7vw,6rem); }
   display:flex; align-items:center; justify-content:space-between;
   gap:1rem; margin-bottom:1.4rem;
 }
+/* Sur écran étroit, les deux éléments n'ont plus la place de cohabiter
+   sur une ligne : on les empile plutôt que de les comprimer. */
+@media (max-width:620px){
+  .product-head{
+    flex-direction:column; align-items:flex-start; gap:.85rem;
+  }
+}
 .product-ref{
   font-size:.82rem; font-weight:700; letter-spacing:.02em;
   padding:.35rem .85rem; border-radius:999px;
@@ -446,6 +453,7 @@ section{ padding-block:clamp(3.5rem,7vw,6rem); }
 .sizes button{
   padding:.42rem 1.05rem; border:0; border-radius:999px;
   background:transparent; cursor:pointer;
+  white-space:nowrap;      /* « 5 L » ne doit jamais se couper en deux */
   font-weight:700; font-size:.82rem;
   transition:background-color .2s var(--ease), color .2s var(--ease);
 }
@@ -503,12 +511,15 @@ section{ padding-block:clamp(3.5rem,7vw,6rem); }
   border-top:1px solid rgba(255,255,255,.16);
 }
 .spec-grid > div{
-  padding:1.6rem 1.4rem 1.6rem 0;
+  padding:1.6rem 1.4rem;
   border-bottom:1px solid rgba(255,255,255,.16);
   border-inline-end:1px solid rgba(255,255,255,.16);
 }
-.spec-grid > div:not(:first-child){ padding-inline-start:1.4rem; }
 .spec-grid > div:last-child{ border-inline-end:0; }
+/* En colonne unique, plus de filet vertical : il ne sépare plus rien. */
+@media (max-width:660px){
+  .spec-grid > div{ border-inline-end:0; padding-inline:0; }
+}
 .spec-grid h3{ font-size:1.05rem; margin-bottom:.45rem; }
 .spec-grid p{ color:#A9C0D4; font-size:.93rem; line-height:1.6; }
 .spec-icon{ width:26px; height:26px; margin-bottom:.9rem; stroke:var(--sky); }
